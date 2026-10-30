@@ -56,6 +56,8 @@ Não é necessário instalar Ravi, ter conta no npm privado ou acessar o código
 
 Construa em `workspace/`, faça commits pequenos e abra um PR com código, lockfile, `PROVENANCE.md`, `LACUNAS.md` e evidências. `node_modules/` e `dist/` ficam fora do Git. O template do PR orienta o resumo. Para dúvidas ou bugs, use uma Issue e informe commit do kit, versão do pacote e passos de reprodução.
 
+**Divisão de trabalho:** Michael monta workspaces; o Rbbt UI cria e mantém os widgets. Para pedir um widget ou ampliar um contrato, use o modelo de Issue “Pedido de widget ao Rbbt UI”. O coordenador encaminha o pedido ao Studio e acompanha o retorno por versão do kit; esse encaminhamento é manual. Não é necessário dar ao Michael acesso ao código-fonte da biblioteca.
+
 Se tiver apenas leitura, peça acesso de escrita ao coordenador antes de enviar uma branch. Não mude a visibilidade do repositório. Não publique a aplicação ou a biblioteca neste exercício.
 
 ## Atualizações
