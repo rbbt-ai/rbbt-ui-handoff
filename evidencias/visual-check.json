@@ -1,0 +1,22 @@
+[
+  {
+    "name": "catalogo-rc6",
+    "pageErrors": [],
+    "ok": true
+  },
+  {
+    "name": "calendar-heatmap",
+    "pageErrors": [],
+    "ok": true
+  },
+  {
+    "name": "receita-desktop",
+    "pageErrors": [],
+    "ok": true
+  },
+  {
+    "name": "receita-celular-escuro",
+    "pageErrors": [],
+    "ok": true
+  }
+]

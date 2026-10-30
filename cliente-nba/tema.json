@@ -1,0 +1,49 @@
+{
+  "_aviso": "Tema de cliente para a reconstrução PRIVADA (rota /workspaces/nba-glass-receita/). A marca não vai para o catálogo público nem para o pacote.",
+  "id": "nba-store",
+  "nome": "NBA Store",
+  "rotulo": "STORE WORKSPACE",
+  "sigla": "NBA",
+  "cores": {
+    "descricao": "Azul profundo (marca, destaque, menu ativo, séries) e vermelho (sinal: ponto do caminho e traço do rodapé).",
+    "claro": {
+      "accent": "#174fa7",
+      "accentFrom": "#1452ac",
+      "accentTo": "#5082cf",
+      "highlight": "#1f5bb8",
+      "featuredFrom": "#0d2c61",
+      "featuredTo": "#1b539a",
+      "navSelected": "#153b71",
+      "onNavSelected": "#ffffff",
+      "signal": "#be2946",
+      "seriesActual": "#245fbd",
+      "seriesTarget": "#a36b79",
+      "fg": "#172d49"
+    },
+    "escuro": {
+      "accent": "#8ab4ff",
+      "accentFrom": "#4f86ec",
+      "accentTo": "#a9c4ff",
+      "highlight": "#8ab4ff",
+      "featuredFrom": "#123676",
+      "featuredTo": "#2459b4",
+      "navSelected": "#21457e",
+      "onNavSelected": "#ffffff",
+      "signal": "#e25472",
+      "seriesActual": "#8ab4ff",
+      "seriesTarget": "#d99aab"
+    }
+  },
+  "logo": {
+    "arquivo": "nba-store.svg",
+    "alt": "NBA Store",
+    "largura": 54,
+    "altura": 32,
+    "placa": {
+      "claro": "#174fa7",
+      "escuro": false
+    },
+    "observacao": "As letras do arquivo são brancas: no claro, o logo vai numa placa no azul da marca; no escuro, direto no vidro."
+  },
+  "familia": "glass"
+}

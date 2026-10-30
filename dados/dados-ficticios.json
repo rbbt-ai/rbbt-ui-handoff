@@ -1,0 +1,3464 @@
+{
+  "_aviso": "DADOS FICTÍCIOS. Números, lojas, produtos, ações e estados são inventados para demonstrar o workspace; não representam resultados reais do cliente. Este arquivo tem só dados e textos, sem código.",
+  "ficticio": true,
+  "versao": {
+    "pacote": "@rbbt/ui@0.5.0-rc.2",
+    "gerado": "29/10/2026",
+    "equivalente": "NBA Store Workspace Glass de 27/10/2026 (dados e textos)"
+  },
+  "relogio": {
+    "agora": "2026-10-26T09:00:00-03:00",
+    "ultimoDia": "2026-10-26",
+    "fusoHorario": "America/Sao_Paulo"
+  },
+  "formatos": {
+    "moeda": {
+      "style": "currency",
+      "currency": "BRL",
+      "maximumFractionDigits": 0
+    },
+    "moedaCompacta": {
+      "style": "currency",
+      "currency": "BRL",
+      "maximumFractionDigits": 2,
+      "notation": "compact"
+    },
+    "moedaComCentavos": {
+      "style": "currency",
+      "currency": "BRL",
+      "maximumFractionDigits": 2
+    },
+    "percentual": {
+      "style": "percent",
+      "maximumFractionDigits": 1
+    },
+    "numero": {
+      "style": "number"
+    }
+  },
+  "recortes": [
+    {
+      "id": "rbr",
+      "rotulo": "RBR · 20 lojas",
+      "lojas": 20
+    },
+    {
+      "id": "gp",
+      "rotulo": "Gramado / Pedras Altas",
+      "lojas": 2
+    }
+  ],
+  "periodos": [
+    {
+      "id": "ontem",
+      "rotulo": "Ontem",
+      "dias": 1,
+      "nome": "26 de outubro",
+      "datas": "26 de outubro, 2026"
+    },
+    {
+      "id": "semana",
+      "rotulo": "Semana",
+      "dias": 7,
+      "nome": "20–26 de outubro",
+      "datas": "20–26 de outubro, 2026"
+    },
+    {
+      "id": "mes",
+      "rotulo": "Mês",
+      "dias": 26,
+      "nome": "1–26 de outubro",
+      "datas": "1–26 de outubro, 2026"
+    }
+  ],
+  "padroes": {
+    "recorte": "rbr",
+    "periodo": "semana",
+    "modulo": "visao-geral",
+    "modo": "claro"
+  },
+  "textos": {
+    "cabecalho": {
+      "caminho": [
+        "NBA Store",
+        "Inteligência comercial"
+      ],
+      "selo": "Proposta · dados fictícios",
+      "exportar": "Exportar"
+    },
+    "modulos": [
+      {
+        "id": "visao-geral",
+        "rotulo": "Visão geral",
+        "icone": "LayoutDashboard",
+        "frase": "Sua pauta. Seu próximo movimento.",
+        "subtitulo": "Uma visão clara da rede. Três prioridades para começar."
+      },
+      {
+        "id": "lojas",
+        "rotulo": "Lojas",
+        "icone": "Store",
+        "frase": "Cada loja conta uma história.",
+        "subtitulo": null
+      },
+      {
+        "id": "mix",
+        "rotulo": "Mix",
+        "icone": "Layers",
+        "frase": "O que move o resultado.",
+        "subtitulo": null
+      },
+      {
+        "id": "estoque",
+        "rotulo": "Estoque",
+        "icone": "Package",
+        "frase": "Estoque no lugar certo.",
+        "subtitulo": null
+      },
+      {
+        "id": "plano",
+        "rotulo": "Plano de ação",
+        "icone": "CheckCheck",
+        "frase": "Da decisão ao resultado.",
+        "subtitulo": null
+      },
+      {
+        "id": "qualidade",
+        "rotulo": "Qualidade",
+        "icone": "ShieldCheck",
+        "frase": "Confiança antes da decisão.",
+        "subtitulo": null
+      }
+    ],
+    "subtituloDosOutrosModulos": "{recorte} · análise demonstrativa, com evidências a um clique.",
+    "filtros": {
+      "recorte": "Grupo de lojas",
+      "periodo": "Período",
+      "cobertura": "{comDados}/{total} lojas com dados",
+      "coberturaLevaA": "qualidade"
+    },
+    "contextoDaPagina": {
+      "fonte": "Cenário demonstrativo · sem conexão com ERP",
+      "periodo": "o nome do período (ex.: 20–26 de outubro)"
+    },
+    "perfil": {
+      "nome": "Perfil de demonstração",
+      "iniciais": "TF"
+    },
+    "rodape": {
+      "sigla": "NBA",
+      "rotulo": "STORE WORKSPACE",
+      "nota": "Proposta de experiência · Rbbt UI 0.5.0-rc.2 · dados fictícios",
+      "link": {
+        "rotulo": "Abrir catálogo",
+        "destino": "/catalogo/"
+      }
+    },
+    "detalhe": {
+      "sobrelinha": "NBA STORE · DEMONSTRAÇÃO",
+      "subtitulo": "Dados e interações demonstrativos"
+    },
+    "avisos": {
+      "csv": "CSV demonstrativo exportado.",
+      "rascunho": "Rascunho criado neste navegador.",
+      "etapa": "Etapa atualizada apenas nesta demonstração.",
+      "armazenamento": "Armazenamento indisponível: as mudanças duram somente nesta sessão."
+    },
+    "csv": {
+      "arquivo": "NBA-DEMONSTRACAO.csv",
+      "primeiraLinha": "Dados fictícios;{recorte};{periodo}",
+      "colunas": [
+        "Loja",
+        "Receita",
+        "Notas",
+        "Ticket"
+      ],
+      "semDados": "Sem dados",
+      "separador": ";"
+    }
+  },
+  "visaoGeral": {
+    "indicadores": [
+      {
+        "id": "receita",
+        "rotulo": "Receita líquida",
+        "icone": "ShoppingBag",
+        "destaque": true,
+        "valor": "indicadores.receita",
+        "comparavel": "indicadores.receitaAnterior",
+        "formato": "moedaCompacta",
+        "comparacao": "Período comparável",
+        "valorSecundario": {
+          "valor": "indicadores.variacaoReceita",
+          "formato": "moeda",
+          "sinal": true,
+          "rotulo": "vs. comparável"
+        },
+        "descricao": "Soma das lojas com dados. Vendas menos cancelamentos e devoluções. Cenário fictício; não representa resultados reais da NBA."
+      },
+      {
+        "id": "notas",
+        "rotulo": "Notas de venda",
+        "icone": "Receipt",
+        "valor": "indicadores.notas",
+        "comparavel": "indicadores.notasAnteriores",
+        "formato": "numero",
+        "comparacao": "Período comparável",
+        "descricao": "Quantidade demonstrativa de notas, não de pedidos. Universo idêntico ao da receita."
+      },
+      {
+        "id": "ticket",
+        "rotulo": "Ticket médio",
+        "icone": "Activity",
+        "valor": "indicadores.ticket",
+        "comparavel": "indicadores.ticketAnterior",
+        "formato": "moedaComCentavos",
+        "comparacao": "Período comparável",
+        "descricao": "Receita líquida dividida pelas notas de venda do mesmo recorte."
+      }
+    ],
+    "cesta": {
+      "titulo": "Composição da cesta",
+      "icone": "Layers",
+      "esquerda": {
+        "valor": "indicadores.skusPorNota",
+        "rotulo": "SKUs / nota"
+      },
+      "direita": {
+        "valor": "indicadores.precoPorPeca",
+        "formato": "moeda",
+        "rotulo": "preço / peça"
+      },
+      "nota": "2,6 peças por nota · cenário fictício"
+    },
+    "ritmo": {
+      "titulo": "Ritmo de vendas",
+      "subtitulo": "{periodo} · realizado × meta demonstrativa",
+      "visao": "diária",
+      "altura": 240,
+      "formato": "moeda",
+      "formula": "Valores sintéticos distribuídos por um perfil diário ilustrativo. A soma confere com a receita do recorte."
+    },
+    "meta": {
+      "titulo": "Em direção à meta",
+      "subtitulo": "Mesmo período e lojas cobertas",
+      "icone": "Target",
+      "legenda": "da meta do período",
+      "rotuloDaMeta": "Meta demonstrativa",
+      "seta": "Ver lojas",
+      "setaLevaA": "lojas"
+    },
+    "prioridades": {
+      "titulo": "Onde atuar agora",
+      "subtitulo": "Prioridades ilustrativas · impacto, urgência e confiança",
+      "acao": "Ver plano de ação",
+      "acaoLevaA": "plano",
+      "verEvidencia": "Ver evidência",
+      "card": "número, etiqueta (a 01 em vermelho), título, '{onde} · {texto}', responsável e 'Ver evidência'",
+      "detalhe": {
+        "etiqueta": "Prioridade demonstrativa",
+        "evidencia": "Evidência",
+        "recomendacao": "Recomendação",
+        "textoDaRecomendacao": "Conferir os movimentos da fonte e comparar o mesmo universo antes de decidir.",
+        "responsavel": "Próximo responsável",
+        "botao": "Adicionar ao plano"
+      }
+    }
+  },
+  "lojas": {
+    "modulo": "a mesma fileira de indicadores da Visão geral, depois a tabela",
+    "titulo": "Lojas, lado a lado",
+    "subtitulo": "Ordene, busque e abra uma unidade para investigar.",
+    "cabecalhoDasLinhas": "Loja",
+    "colunas": [
+      {
+        "id": "receita",
+        "titulo": "Receita líquida",
+        "formato": "moeda",
+        "soma": true,
+        "enfase": "primary"
+      },
+      {
+        "id": "variacao",
+        "titulo": "Variação R$",
+        "formato": "moeda",
+        "sinal": true,
+        "polaridade": "higher-is-better",
+        "soma": true
+      },
+      {
+        "id": "variacaoPct",
+        "titulo": "Variação %",
+        "formato": "percentual",
+        "sinal": true,
+        "polaridade": "higher-is-better"
+      },
+      {
+        "id": "notas",
+        "titulo": "Notas",
+        "formato": "numero",
+        "soma": true
+      },
+      {
+        "id": "ticket",
+        "titulo": "Ticket médio",
+        "formato": "moeda"
+      }
+    ],
+    "ordemInicial": {
+      "coluna": "variacao",
+      "direcao": "asc"
+    },
+    "exportacao": {
+      "arquivo": "NBA-lojas-DEMONSTRACAO",
+      "escopo": "{recorte} · {periodo} · dados fictícios"
+    },
+    "ressalva": "CDs fora dos resultados comerciais. Demais lojas aguardam classificação confirmada.",
+    "detalheDaLoja": {
+      "indicadores": [
+        {
+          "rotulo": "Receita da loja",
+          "valor": "receita",
+          "comparavel": "receitaAnterior",
+          "formato": "moeda",
+          "comparacao": "Comparável"
+        },
+        {
+          "rotulo": "Notas de venda",
+          "valor": "notas"
+        }
+      ],
+      "grafico": {
+        "titulo": "Evolução diária da loja",
+        "regra": "receita da loja dividida igualmente pelos dias do período (o resto no último dia), sem meta",
+        "altura": 200
+      },
+      "nota": {
+        "titulo": "Investigue antes de concluir",
+        "texto": "Variação pode vir de notas, cesta ou preço. Esta ficha mostra o caminho de análise; não atribui causalidade."
+      },
+      "botao": "Criar ação para esta loja"
+    }
+  },
+  "mix": {
+    "titulo": "Explorador de mix",
+    "contexto": "{recorte} · {periodo} vs. período comparável · dados fictícios",
+    "metrica": {
+      "rotulo": "Receita líquida",
+      "formato": "moeda"
+    },
+    "niveis": [
+      "Linha",
+      "Marca",
+      {
+        "label": "Referência",
+        "plural": "Referências"
+      }
+    ],
+    "rotulosDoPeriodo": {
+      "current": "Atual",
+      "base": "Comparável"
+    },
+    "descricao": "Linhas, marcas e referências fictícias para demonstrar a navegação. Tamanhos agrupados no resultado comercial.",
+    "ressalva": "Estoque e custo não estão integrados: participação não comprova margem ou potencial de expansão.",
+    "caminho": "começa na raiz e volta à raiz quando o recorte muda",
+    "nota": {
+      "titulo": "Do panorama à referência, sem perder o contexto.",
+      "texto": "Explore uma linha, depois uma marca e uma referência. O grupo e o período permanecem no topo.",
+      "icone": "Layers"
+    },
+    "arvore": "cenarios.{recorte}.{periodo}.mix (nomes de marca só como rótulo ilustrativo; valores fictícios)"
+  },
+  "estoque": {
+    "titulo": "Grade & cobertura",
+    "subtitulo": "Referência Demo 01 · unidades fictícias · posição em 26/10",
+    "selo": "Simulação",
+    "nota": "Zero = estoque zerado no exemplo. Cobertura sintética; não use para transferir mercadoria.",
+    "botao": "Simular transferência",
+    "regra": "Cobertura sintética do exemplo; vendaSemanal = estoque total ÷ cobertura, para a cobertura calculada pelo pacote bater com a de referência.",
+    "porRecorte": {
+      "rbr": {
+        "posicao": "26/10/2026",
+        "tamanhos": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44"
+        ],
+        "linhas": [
+          {
+            "loja": "rbr-0",
+            "nome": "Loja 01",
+            "tamanho": "38",
+            "quantidade": 0,
+            "vendaSemanal": 12.5
+          },
+          {
+            "loja": "rbr-0",
+            "nome": "Loja 01",
+            "tamanho": "39",
+            "quantidade": 3,
+            "vendaSemanal": 12.5
+          },
+          {
+            "loja": "rbr-0",
+            "nome": "Loja 01",
+            "tamanho": "40",
+            "quantidade": 3,
+            "vendaSemanal": 12.5
+          },
+          {
+            "loja": "rbr-0",
+            "nome": "Loja 01",
+            "tamanho": "41",
+            "quantidade": 3,
+            "vendaSemanal": 12.5
+          },
+          {
+            "loja": "rbr-0",
+            "nome": "Loja 01",
+            "tamanho": "42",
+            "quantidade": 0,
+            "vendaSemanal": 12.5
+          },
+          {
+            "loja": "rbr-0",
+            "nome": "Loja 01",
+            "tamanho": "43",
+            "quantidade": 3,
+            "vendaSemanal": 12.5
+          },
+          {
+            "loja": "rbr-0",
+            "nome": "Loja 01",
+            "tamanho": "44",
+            "quantidade": 3,
+            "vendaSemanal": 12.5
+          },
+          {
+            "loja": "rbr-1",
+            "nome": "Loja 02",
+            "tamanho": "38",
+            "quantidade": 3,
+            "vendaSemanal": 18
+          },
+          {
+            "loja": "rbr-1",
+            "nome": "Loja 02",
+            "tamanho": "39",
+            "quantidade": 4,
+            "vendaSemanal": 18
+          },
+          {
+            "loja": "rbr-1",
+            "nome": "Loja 02",
+            "tamanho": "40",
+            "quantidade": 5,
+            "vendaSemanal": 18
+          },
+          {
+            "loja": "rbr-1",
+            "nome": "Loja 02",
+            "tamanho": "41",
+            "quantidade": 0,
+            "vendaSemanal": 18
+          },
+          {
+            "loja": "rbr-1",
+            "nome": "Loja 02",
+            "tamanho": "42",
+            "quantidade": 7,
+            "vendaSemanal": 18
+          },
+          {
+            "loja": "rbr-1",
+            "nome": "Loja 02",
+            "tamanho": "43",
+            "quantidade": 8,
+            "vendaSemanal": 18
+          },
+          {
+            "loja": "rbr-1",
+            "nome": "Loja 02",
+            "tamanho": "44",
+            "quantidade": 9,
+            "vendaSemanal": 18
+          },
+          {
+            "loja": "rbr-2",
+            "nome": "Loja 03",
+            "tamanho": "38",
+            "quantidade": 3,
+            "vendaSemanal": 14.64
+          },
+          {
+            "loja": "rbr-2",
+            "nome": "Loja 03",
+            "tamanho": "39",
+            "quantidade": 5,
+            "vendaSemanal": 14.64
+          },
+          {
+            "loja": "rbr-2",
+            "nome": "Loja 03",
+            "tamanho": "40",
+            "quantidade": 0,
+            "vendaSemanal": 14.64
+          },
+          {
+            "loja": "rbr-2",
+            "nome": "Loja 03",
+            "tamanho": "41",
+            "quantidade": 9,
+            "vendaSemanal": 14.64
+          },
+          {
+            "loja": "rbr-2",
+            "nome": "Loja 03",
+            "tamanho": "42",
+            "quantidade": 11,
+            "vendaSemanal": 14.64
+          },
+          {
+            "loja": "rbr-2",
+            "nome": "Loja 03",
+            "tamanho": "43",
+            "quantidade": 13,
+            "vendaSemanal": 14.64
+          },
+          {
+            "loja": "rbr-2",
+            "nome": "Loja 03",
+            "tamanho": "44",
+            "quantidade": 0,
+            "vendaSemanal": 14.64
+          },
+          {
+            "loja": "rbr-3",
+            "nome": "Loja 04",
+            "tamanho": "38",
+            "quantidade": 3,
+            "vendaSemanal": 10
+          },
+          {
+            "loja": "rbr-3",
+            "nome": "Loja 04",
+            "tamanho": "39",
+            "quantidade": 0,
+            "vendaSemanal": 10
+          },
+          {
+            "loja": "rbr-3",
+            "nome": "Loja 04",
+            "tamanho": "40",
+            "quantidade": 9,
+            "vendaSemanal": 10
+          },
+          {
+            "loja": "rbr-3",
+            "nome": "Loja 04",
+            "tamanho": "41",
+            "quantidade": 12,
+            "vendaSemanal": 10
+          },
+          {
+            "loja": "rbr-3",
+            "nome": "Loja 04",
+            "tamanho": "42",
+            "quantidade": 3,
+            "vendaSemanal": 10
+          },
+          {
+            "loja": "rbr-3",
+            "nome": "Loja 04",
+            "tamanho": "43",
+            "quantidade": 0,
+            "vendaSemanal": 10
+          },
+          {
+            "loja": "rbr-3",
+            "nome": "Loja 04",
+            "tamanho": "44",
+            "quantidade": 9,
+            "vendaSemanal": 10
+          },
+          {
+            "loja": "rbr-4",
+            "nome": "Loja 05",
+            "tamanho": "38",
+            "quantidade": 0,
+            "vendaSemanal": 7.95
+          },
+          {
+            "loja": "rbr-4",
+            "nome": "Loja 05",
+            "tamanho": "39",
+            "quantidade": 7,
+            "vendaSemanal": 7.95
+          },
+          {
+            "loja": "rbr-4",
+            "nome": "Loja 05",
+            "tamanho": "40",
+            "quantidade": 11,
+            "vendaSemanal": 7.95
+          },
+          {
+            "loja": "rbr-4",
+            "nome": "Loja 05",
+            "tamanho": "41",
+            "quantidade": 3,
+            "vendaSemanal": 7.95
+          },
+          {
+            "loja": "rbr-4",
+            "nome": "Loja 05",
+            "tamanho": "42",
+            "quantidade": 0,
+            "vendaSemanal": 7.95
+          },
+          {
+            "loja": "rbr-4",
+            "nome": "Loja 05",
+            "tamanho": "43",
+            "quantidade": 11,
+            "vendaSemanal": 7.95
+          },
+          {
+            "loja": "rbr-4",
+            "nome": "Loja 05",
+            "tamanho": "44",
+            "quantidade": 3,
+            "vendaSemanal": 7.95
+          }
+        ],
+        "coberturaDeReferencia": [
+          {
+            "loja": "rbr-0",
+            "nome": "Loja 01",
+            "estoqueTotal": 15,
+            "coberturaSemanas": 1.2
+          },
+          {
+            "loja": "rbr-1",
+            "nome": "Loja 02",
+            "estoqueTotal": 36,
+            "coberturaSemanas": 2
+          },
+          {
+            "loja": "rbr-2",
+            "nome": "Loja 03",
+            "estoqueTotal": 41,
+            "coberturaSemanas": 2.8
+          },
+          {
+            "loja": "rbr-3",
+            "nome": "Loja 04",
+            "estoqueTotal": 36,
+            "coberturaSemanas": 3.6
+          },
+          {
+            "loja": "rbr-4",
+            "nome": "Loja 05",
+            "estoqueTotal": 35,
+            "coberturaSemanas": 4.4
+          }
+        ]
+      },
+      "gp": {
+        "posicao": "26/10/2026",
+        "tamanhos": [
+          "38",
+          "39",
+          "40",
+          "41",
+          "42",
+          "43",
+          "44"
+        ],
+        "linhas": [
+          {
+            "loja": "gp-0",
+            "nome": "Gramado",
+            "tamanho": "38",
+            "quantidade": 0,
+            "vendaSemanal": 12.5
+          },
+          {
+            "loja": "gp-0",
+            "nome": "Gramado",
+            "tamanho": "39",
+            "quantidade": 3,
+            "vendaSemanal": 12.5
+          },
+          {
+            "loja": "gp-0",
+            "nome": "Gramado",
+            "tamanho": "40",
+            "quantidade": 3,
+            "vendaSemanal": 12.5
+          },
+          {
+            "loja": "gp-0",
+            "nome": "Gramado",
+            "tamanho": "41",
+            "quantidade": 3,
+            "vendaSemanal": 12.5
+          },
+          {
+            "loja": "gp-0",
+            "nome": "Gramado",
+            "tamanho": "42",
+            "quantidade": 0,
+            "vendaSemanal": 12.5
+          },
+          {
+            "loja": "gp-0",
+            "nome": "Gramado",
+            "tamanho": "43",
+            "quantidade": 3,
+            "vendaSemanal": 12.5
+          },
+          {
+            "loja": "gp-0",
+            "nome": "Gramado",
+            "tamanho": "44",
+            "quantidade": 3,
+            "vendaSemanal": 12.5
+          },
+          {
+            "loja": "gp-1",
+            "nome": "Pedras Altas",
+            "tamanho": "38",
+            "quantidade": 3,
+            "vendaSemanal": 18
+          },
+          {
+            "loja": "gp-1",
+            "nome": "Pedras Altas",
+            "tamanho": "39",
+            "quantidade": 4,
+            "vendaSemanal": 18
+          },
+          {
+            "loja": "gp-1",
+            "nome": "Pedras Altas",
+            "tamanho": "40",
+            "quantidade": 5,
+            "vendaSemanal": 18
+          },
+          {
+            "loja": "gp-1",
+            "nome": "Pedras Altas",
+            "tamanho": "41",
+            "quantidade": 0,
+            "vendaSemanal": 18
+          },
+          {
+            "loja": "gp-1",
+            "nome": "Pedras Altas",
+            "tamanho": "42",
+            "quantidade": 7,
+            "vendaSemanal": 18
+          },
+          {
+            "loja": "gp-1",
+            "nome": "Pedras Altas",
+            "tamanho": "43",
+            "quantidade": 8,
+            "vendaSemanal": 18
+          },
+          {
+            "loja": "gp-1",
+            "nome": "Pedras Altas",
+            "tamanho": "44",
+            "quantidade": 9,
+            "vendaSemanal": 18
+          }
+        ],
+        "coberturaDeReferencia": [
+          {
+            "loja": "gp-0",
+            "nome": "Gramado",
+            "estoqueTotal": 15,
+            "coberturaSemanas": 1.2
+          },
+          {
+            "loja": "gp-1",
+            "nome": "Pedras Altas",
+            "estoqueTotal": 36,
+            "coberturaSemanas": 2
+          }
+        ]
+      }
+    }
+  },
+  "transferencia": {
+    "titulo": "Simular redistribuição",
+    "contexto": "Referência Demo 01 · tamanho 40 · valores sintéticos independentes da matriz ilustrativa.",
+    "unidades": {
+      "rbr": [
+        {
+          "id": "rbr-0",
+          "rotulo": "Loja 01",
+          "estoque": 12,
+          "vendaSemanal": 2,
+          "papel": "origem"
+        },
+        {
+          "id": "rbr-1",
+          "rotulo": "Loja 02",
+          "estoque": 0,
+          "vendaSemanal": 2,
+          "papel": "destino"
+        }
+      ],
+      "gp": [
+        {
+          "id": "gp-0",
+          "rotulo": "Gramado",
+          "estoque": 12,
+          "vendaSemanal": 2,
+          "papel": "origem"
+        },
+        {
+          "id": "gp-1",
+          "rotulo": "Pedras Altas",
+          "estoque": 0,
+          "vendaSemanal": 2,
+          "papel": "destino"
+        }
+      ]
+    },
+    "quantidadeInicial": 2,
+    "quantidadeMinima": 1,
+    "quantidadeMaxima": 4,
+    "abre": "sob demanda, pelo botão da grade (estoque.botao), como no original",
+    "semanasMinimasNaOrigem": 4,
+    "limite": "Limite ilustrativo: preservar 4 semanas na origem. Disponibilidade e depósito precisam de confirmação real.",
+    "botao": "Criar rascunho de avaliação",
+    "rascunho": {
+      "titulo": "Avaliar redistribuição · Demo 01",
+      "loja": "o destino",
+      "responsavel": "A definir",
+      "prazo": "A definir",
+      "motivo": "Criado a partir da análise demonstrativa deste workspace."
+    }
+  },
+  "plano": {
+    "titulo": "Plano de ação",
+    "subtitulo": "Demonstração salva neste navegador · aprovação não comprova execução.",
+    "subtituloSeEmMemoria": "Demonstração em memória · aprovação não comprova execução.",
+    "novaAcao": {
+      "botao": "Nova ação",
+      "titulo": "Investigar resultado da loja",
+      "loja": "a primeira loja com dados do recorte",
+      "responsavel": "A definir",
+      "prazo": "A definir",
+      "motivo": "Criado a partir da análise demonstrativa deste workspace."
+    },
+    "etapas": [
+      "Sugerido",
+      "Aprovado",
+      "Executado",
+      "Resultado avaliado"
+    ],
+    "etapaVazia": "Nenhuma ação nesta etapa",
+    "detalhe": {
+      "aviso": "Registro local de demonstração. Nenhuma pessoa é notificada e nenhuma operação é executada.",
+      "evidenciaDaExecucao": "Comprovação demonstrativa da execução",
+      "evidenciaDaAvaliacao": "Resultado observado e ressalvas",
+      "dica": "Descreva a evidência para avançar nesta demonstração.",
+      "botoes": [
+        "Simular aprovação",
+        "Registrar execução demonstrativa",
+        "Registrar avaliação"
+      ],
+      "final": "Avaliação demonstrativa registrada."
+    },
+    "acoes": [
+      {
+        "id": "a1",
+        "titulo": "Investigar queda de notas",
+        "etapa": "sugerido",
+        "loja": "Loja 03",
+        "recorte": "rbr",
+        "responsavel": "Gestão comercial",
+        "prazo": "28/10",
+        "motivo": "Notas abaixo do período comparável; verificar fluxo antes de atribuir causa."
+      },
+      {
+        "id": "a2",
+        "titulo": "Revisar cobertura da grade",
+        "etapa": "aprovado",
+        "loja": "Loja 07",
+        "recorte": "rbr",
+        "responsavel": "Planejamento",
+        "prazo": "29/10",
+        "motivo": "Referência Demo 01 com lacunas nos tamanhos 40 e 42."
+      },
+      {
+        "id": "a3",
+        "titulo": "Conferir devoluções",
+        "etapa": "sugerido",
+        "loja": "Loja 12",
+        "recorte": "rbr",
+        "responsavel": "Operações",
+        "prazo": "30/10",
+        "motivo": "Variação fora do padrão desta simulação. Conferir movimentos de origem."
+      }
+    ]
+  },
+  "qualidade": {
+    "cards": [
+      {
+        "id": "cobertura",
+        "icone": "ShieldCheck",
+        "titulo": "{comDados} de {total} lojas",
+        "texto": "Com dados no cenário. Nenhuma fonte real conectada."
+      },
+      {
+        "id": "snapshot",
+        "icone": "Clock",
+        "titulo": "Snapshot demonstrativo",
+        "texto": "26/10/2026 · última venda e sincronização são conceitos diferentes."
+      },
+      {
+        "id": "universo",
+        "icone": "Layers",
+        "titulo": "Mesmo universo",
+        "texto": "Comparações excluem lojas sem leitura. CDs separados; demais lojas sem classificação ficam fora."
+      }
+    ],
+    "mapa": {
+      "titulo": "Mapa de cobertura",
+      "descricao": "Todos os dados desta proposta são sintéticos. Não existe sincronização real; os estados demonstram como ausências serão apresentadas.",
+      "regra": "loja com receita = com dados (leitura em 26/10/2026 06:00); sem receita = sem leitura ('Não recebido'), nunca zero"
+    },
+    "origemEFormula": {
+      "titulo": "Origem e fórmula, sempre disponíveis.",
+      "texto": "Os botões de informação dos widgets explicam o cálculo. Receita = vendas − cancelamentos − devoluções. Ticket = receita ÷ notas. Sem leitura permanece ausente, nunca zero.",
+      "fonte": "Cenário demonstrativo · sem conexão com ERP",
+      "formula": "Receita = vendas − cancelamentos − devoluções. Ticket = receita ÷ notas.",
+      "cobertura": "Loja com dados = receita numérica no período. Sem leitura permanece ausente, nunca zero."
+    }
+  },
+  "cenarios": {
+    "rbr": {
+      "ontem": {
+        "aviso": "Cenário fictício: RBR · 20 lojas · 26 de outubro, 2026. Não representa resultados reais.",
+        "lojas": [
+          {
+            "loja": "rbr-0",
+            "nome": "Loja 01",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 10660,
+            "receitaAnterior": 10300,
+            "variacao": 360,
+            "variacaoPct": 0.03495145631067961,
+            "notas": 52,
+            "ticket": 205,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-1",
+            "nome": "Loja 02",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 12027,
+            "receitaAnterior": 11389,
+            "variacao": 638,
+            "variacaoPct": 0.05601896566862762,
+            "notas": 57,
+            "ticket": 211,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-2",
+            "nome": "Loja 03",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 13454,
+            "receitaAnterior": 16488,
+            "variacao": -3034,
+            "variacaoPct": -0.18401261523532267,
+            "notas": 62,
+            "ticket": 217,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-3",
+            "nome": "Loja 04",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 14941,
+            "receitaAnterior": 13607,
+            "variacao": 1334,
+            "variacaoPct": 0.09803777467479974,
+            "notas": 67,
+            "ticket": 223,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-4",
+            "nome": "Loja 05",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 16488,
+            "receitaAnterior": 14735,
+            "variacao": 1753,
+            "variacaoPct": 0.11896844248388191,
+            "notas": 72,
+            "ticket": 229,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-5",
+            "nome": "Loja 06",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 18095,
+            "receitaAnterior": 17483,
+            "variacao": 612,
+            "variacaoPct": 0.03500543385002574,
+            "notas": 77,
+            "ticket": 235,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-6",
+            "nome": "Loja 07",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 19762,
+            "receitaAnterior": 21764,
+            "variacao": -2002,
+            "variacaoPct": -0.09198676713839368,
+            "notas": 82,
+            "ticket": 241,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-7",
+            "nome": "Loja 08",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 21489,
+            "receitaAnterior": 19953,
+            "variacao": 1536,
+            "variacaoPct": 0.07698090512704857,
+            "notas": 87,
+            "ticket": 247,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-8",
+            "nome": "Loja 09",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 23276,
+            "receitaAnterior": 21199,
+            "variacao": 2077,
+            "variacaoPct": 0.09797631963771876,
+            "notas": 92,
+            "ticket": 253,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-9",
+            "nome": "Loja 10",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 25123,
+            "receitaAnterior": 22451,
+            "variacao": 2672,
+            "variacaoPct": 0.11901474321856488,
+            "notas": 97,
+            "ticket": 259,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-10",
+            "nome": "Loja 11",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 27030,
+            "receitaAnterior": 26116,
+            "variacao": 914,
+            "variacaoPct": 0.03499770255781896,
+            "notas": 102,
+            "ticket": 265,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-11",
+            "nome": "Loja 12",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 28997,
+            "receitaAnterior": 27459,
+            "variacao": 1538,
+            "variacaoPct": 0.056010779707928185,
+            "notas": 107,
+            "ticket": 271,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-12",
+            "nome": "Loja 13",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 31024,
+            "receitaAnterior": 28806,
+            "variacao": 2218,
+            "variacaoPct": 0.07699784767062418,
+            "notas": 112,
+            "ticket": 277,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-13",
+            "nome": "Loja 14",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 33111,
+            "receitaAnterior": 30156,
+            "variacao": 2955,
+            "variacaoPct": 0.09799044966175885,
+            "notas": 117,
+            "ticket": 283,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-14",
+            "nome": "Loja 15",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 35258,
+            "receitaAnterior": 31508,
+            "variacao": 3750,
+            "variacaoPct": 0.11901739240827726,
+            "notas": 122,
+            "ticket": 289,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-15",
+            "nome": "Loja 16",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 37465,
+            "receitaAnterior": 36198,
+            "variacao": 1267,
+            "variacaoPct": 0.035001933808497705,
+            "notas": 127,
+            "ticket": 295,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-16",
+            "nome": "Loja 17",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 39732,
+            "receitaAnterior": 37625,
+            "variacao": 2107,
+            "variacaoPct": 0.056,
+            "notas": 132,
+            "ticket": 301,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-17",
+            "nome": "Loja 18",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 42059,
+            "receitaAnterior": 39052,
+            "variacao": 3007,
+            "variacaoPct": 0.07699989757246747,
+            "notas": 137,
+            "ticket": 307,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-18",
+            "nome": "Loja 19",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": null,
+            "receitaAnterior": null,
+            "variacao": null,
+            "variacaoPct": null,
+            "notas": null,
+            "ticket": null,
+            "ultimaLeitura": null,
+            "situacao": {
+              "rotulo": "Sem dados",
+              "tom": "warning"
+            }
+          },
+          {
+            "loja": "rbr-19",
+            "nome": "Loja 20",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": null,
+            "receitaAnterior": null,
+            "variacao": null,
+            "variacaoPct": null,
+            "notas": null,
+            "ticket": null,
+            "ultimaLeitura": null,
+            "situacao": {
+              "rotulo": "Sem dados",
+              "tom": "warning"
+            }
+          }
+        ],
+        "indicadores": {
+          "receita": 449991,
+          "receitaAnterior": 426289,
+          "variacaoReceita": 23702,
+          "notas": 1701,
+          "notasAnteriores": 1633,
+          "ticket": 264.5449735449736,
+          "ticketAnterior": 261.0465401102266,
+          "skusPorNota": 2.4,
+          "pecasPorNota": 2.6,
+          "precoPorPeca": 101.74806674806676
+        },
+        "ritmoDiario": [
+          {
+            "dia": "2026-10-26",
+            "realizado": 449991,
+            "meta": 474741
+          }
+        ],
+        "meta": {
+          "metaDoPeriodo": 474741,
+          "realizadoSobreMeta": 0.9478663102618059
+        },
+        "cobertura": {
+          "comDados": 18,
+          "total": 20,
+          "semLeitura": [
+            "Loja 19",
+            "Loja 20"
+          ]
+        },
+        "totalDaTabela": {
+          "rotulo": "Total das lojas com dados",
+          "receita": 449991,
+          "notas": 1701
+        },
+        "prioridades": [
+          {
+            "numero": "01",
+            "etiqueta": "Alta prioridade",
+            "tom": "negative",
+            "titulo": "Investigar queda de notas",
+            "onde": "Loja 03",
+            "texto": "Receita abaixo do comparável. Confira volume e ticket antes de concluir a causa.",
+            "responsavel": "Comercial"
+          },
+          {
+            "numero": "02",
+            "etiqueta": "Revisão de estoque",
+            "tom": "accent",
+            "titulo": "Revisar a grade de tamanhos",
+            "onde": "Loja 07",
+            "texto": "O estoque total pode esconder falta nos tamanhos que mais vendem.",
+            "responsavel": "Planejamento"
+          },
+          {
+            "numero": "03",
+            "etiqueta": "Confiança dos dados",
+            "tom": "info",
+            "titulo": "Conferir a cobertura dos dados",
+            "onde": "RBR · 20 lojas",
+            "texto": "2 lojas sem leitura neste cenário. Ausência não é venda zero.",
+            "responsavel": "Operações"
+          }
+        ],
+        "mix": {
+          "id": "root",
+          "label": "Todas as linhas",
+          "current": 449991,
+          "base": 426289,
+          "children": [
+            {
+              "id": "calcados",
+              "label": "Calçados",
+              "current": 260995,
+              "base": 247248,
+              "children": [
+                {
+                  "id": "nike",
+                  "label": "Nike",
+                  "current": 161817,
+                  "base": 160711,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 88999,
+                      "base": 88391
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 72818,
+                      "base": 72320
+                    }
+                  ]
+                },
+                {
+                  "id": "new-era",
+                  "label": "New Era",
+                  "current": 99178,
+                  "base": 86537,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 54548,
+                      "base": 47595
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 44630,
+                      "base": 38942
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "vestuario",
+              "label": "Vestuário",
+              "current": 134997,
+              "base": 127887,
+              "children": [
+                {
+                  "id": "nike",
+                  "label": "Nike",
+                  "current": 83698,
+                  "base": 83127,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 46034,
+                      "base": 45720
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 37664,
+                      "base": 37407
+                    }
+                  ]
+                },
+                {
+                  "id": "new-era",
+                  "label": "New Era",
+                  "current": 51299,
+                  "base": 44760,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 28214,
+                      "base": 24618
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 23085,
+                      "base": 20142
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "acessorios",
+              "label": "Acessórios",
+              "current": 53999,
+              "base": 51154,
+              "children": [
+                {
+                  "id": "nike",
+                  "label": "Nike",
+                  "current": 33479,
+                  "base": 33250,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 18413,
+                      "base": 18288
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 15066,
+                      "base": 14962
+                    }
+                  ]
+                },
+                {
+                  "id": "new-era",
+                  "label": "New Era",
+                  "current": 20520,
+                  "base": 17904,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 11286,
+                      "base": 9847
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 9234,
+                      "base": 8057
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "semana": {
+        "aviso": "Cenário fictício: RBR · 20 lojas · 20–26 de outubro, 2026. Não representa resultados reais.",
+        "lojas": [
+          {
+            "loja": "rbr-0",
+            "nome": "Loja 01",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 74620,
+            "receitaAnterior": 72097,
+            "variacao": 2523,
+            "variacaoPct": 0.03499452126995575,
+            "notas": 364,
+            "ticket": 205,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-1",
+            "nome": "Loja 02",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 84189,
+            "receitaAnterior": 79724,
+            "variacao": 4465,
+            "variacaoPct": 0.05600571973307912,
+            "notas": 399,
+            "ticket": 211,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-2",
+            "nome": "Loja 03",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 94178,
+            "receitaAnterior": 115414,
+            "variacao": -21236,
+            "variacaoPct": -0.18399847505501932,
+            "notas": 434,
+            "ticket": 217,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-3",
+            "nome": "Loja 04",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 104587,
+            "receitaAnterior": 95252,
+            "variacao": 9335,
+            "variacaoPct": 0.09800319153403603,
+            "notas": 469,
+            "ticket": 223,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-4",
+            "nome": "Loja 05",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 115416,
+            "receitaAnterior": 103142,
+            "variacao": 12274,
+            "variacaoPct": 0.11900098892788583,
+            "notas": 504,
+            "ticket": 229,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-5",
+            "nome": "Loja 06",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 126665,
+            "receitaAnterior": 122382,
+            "variacao": 4283,
+            "variacaoPct": 0.03499697667957706,
+            "notas": 539,
+            "ticket": 235,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-6",
+            "nome": "Loja 07",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 138334,
+            "receitaAnterior": 152350,
+            "variacao": -14016,
+            "variacaoPct": -0.09199868723334427,
+            "notas": 574,
+            "ticket": 241,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-7",
+            "nome": "Loja 08",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 150423,
+            "receitaAnterior": 139669,
+            "variacao": 10754,
+            "variacaoPct": 0.07699632703033601,
+            "notas": 609,
+            "ticket": 247,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-8",
+            "nome": "Loja 09",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 162932,
+            "receitaAnterior": 148390,
+            "variacao": 14542,
+            "variacaoPct": 0.09799851742031135,
+            "notas": 644,
+            "ticket": 253,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-9",
+            "nome": "Loja 10",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 175861,
+            "receitaAnterior": 157159,
+            "variacao": 18702,
+            "variacaoPct": 0.11900050267563424,
+            "notas": 679,
+            "ticket": 259,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-10",
+            "nome": "Loja 11",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 189210,
+            "receitaAnterior": 182812,
+            "variacao": 6398,
+            "variacaoPct": 0.03499770255781896,
+            "notas": 714,
+            "ticket": 265,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-11",
+            "nome": "Loja 12",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 202979,
+            "receitaAnterior": 192215,
+            "variacao": 10764,
+            "variacaoPct": 0.05599979189969565,
+            "notas": 749,
+            "ticket": 271,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-12",
+            "nome": "Loja 13",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 217168,
+            "receitaAnterior": 201642,
+            "variacao": 15526,
+            "variacaoPct": 0.07699784767062418,
+            "notas": 784,
+            "ticket": 277,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-13",
+            "nome": "Loja 14",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 231777,
+            "receitaAnterior": 211090,
+            "variacao": 20687,
+            "variacaoPct": 0.09800085271685063,
+            "notas": 819,
+            "ticket": 283,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-14",
+            "nome": "Loja 15",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 246806,
+            "receitaAnterior": 220559,
+            "variacao": 26247,
+            "variacaoPct": 0.11900217175449652,
+            "notas": 854,
+            "ticket": 289,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-15",
+            "nome": "Loja 16",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 262255,
+            "receitaAnterior": 253386,
+            "variacao": 8869,
+            "variacaoPct": 0.035001933808497705,
+            "notas": 889,
+            "ticket": 295,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-16",
+            "nome": "Loja 17",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 278124,
+            "receitaAnterior": 263375,
+            "variacao": 14749,
+            "variacaoPct": 0.056,
+            "notas": 924,
+            "ticket": 301,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-17",
+            "nome": "Loja 18",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 294413,
+            "receitaAnterior": 273364,
+            "variacao": 21049,
+            "variacaoPct": 0.07699989757246747,
+            "notas": 959,
+            "ticket": 307,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-18",
+            "nome": "Loja 19",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": null,
+            "receitaAnterior": null,
+            "variacao": null,
+            "variacaoPct": null,
+            "notas": null,
+            "ticket": null,
+            "ultimaLeitura": null,
+            "situacao": {
+              "rotulo": "Sem dados",
+              "tom": "warning"
+            }
+          },
+          {
+            "loja": "rbr-19",
+            "nome": "Loja 20",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": null,
+            "receitaAnterior": null,
+            "variacao": null,
+            "variacaoPct": null,
+            "notas": null,
+            "ticket": null,
+            "ultimaLeitura": null,
+            "situacao": {
+              "rotulo": "Sem dados",
+              "tom": "warning"
+            }
+          }
+        ],
+        "indicadores": {
+          "receita": 3149937,
+          "receitaAnterior": 2984022,
+          "variacaoReceita": 165915,
+          "notas": 11907,
+          "notasAnteriores": 11431,
+          "ticket": 264.5449735449736,
+          "ticketAnterior": 261.0464526288164,
+          "skusPorNota": 2.4,
+          "pecasPorNota": 2.6,
+          "precoPorPeca": 101.74806674806676
+        },
+        "ritmoDiario": [
+          {
+            "dia": "2026-10-20",
+            "realizado": 363283,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-21",
+            "realizado": 425307,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-22",
+            "realizado": 394295,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-23",
+            "realizado": 496192,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-24",
+            "realizado": 575937,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-25",
+            "realizado": 478471,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-26",
+            "realizado": 416452,
+            "meta": 474741
+          }
+        ],
+        "meta": {
+          "metaDoPeriodo": 3323187,
+          "realizadoSobreMeta": 0.9478663102618059
+        },
+        "cobertura": {
+          "comDados": 18,
+          "total": 20,
+          "semLeitura": [
+            "Loja 19",
+            "Loja 20"
+          ]
+        },
+        "totalDaTabela": {
+          "rotulo": "Total das lojas com dados",
+          "receita": 3149937,
+          "notas": 11907
+        },
+        "prioridades": [
+          {
+            "numero": "01",
+            "etiqueta": "Alta prioridade",
+            "tom": "negative",
+            "titulo": "Investigar queda de notas",
+            "onde": "Loja 03",
+            "texto": "Receita abaixo do comparável. Confira volume e ticket antes de concluir a causa.",
+            "responsavel": "Comercial"
+          },
+          {
+            "numero": "02",
+            "etiqueta": "Revisão de estoque",
+            "tom": "accent",
+            "titulo": "Revisar a grade de tamanhos",
+            "onde": "Loja 07",
+            "texto": "O estoque total pode esconder falta nos tamanhos que mais vendem.",
+            "responsavel": "Planejamento"
+          },
+          {
+            "numero": "03",
+            "etiqueta": "Confiança dos dados",
+            "tom": "info",
+            "titulo": "Conferir a cobertura dos dados",
+            "onde": "RBR · 20 lojas",
+            "texto": "2 lojas sem leitura neste cenário. Ausência não é venda zero.",
+            "responsavel": "Operações"
+          }
+        ],
+        "mix": {
+          "id": "root",
+          "label": "Todas as linhas",
+          "current": 3149937,
+          "base": 2984022,
+          "children": [
+            {
+              "id": "calcados",
+              "label": "Calçados",
+              "current": 1826963,
+              "base": 1730733,
+              "children": [
+                {
+                  "id": "nike",
+                  "label": "Nike",
+                  "current": 1132717,
+                  "base": 1124976,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 622994,
+                      "base": 618737
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 509723,
+                      "base": 506239
+                    }
+                  ]
+                },
+                {
+                  "id": "new-era",
+                  "label": "New Era",
+                  "current": 694246,
+                  "base": 605757,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 381835,
+                      "base": 333166
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 312411,
+                      "base": 272591
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "vestuario",
+              "label": "Vestuário",
+              "current": 944981,
+              "base": 895207,
+              "children": [
+                {
+                  "id": "nike",
+                  "label": "Nike",
+                  "current": 585888,
+                  "base": 581885,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 322238,
+                      "base": 320037
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 263650,
+                      "base": 261848
+                    }
+                  ]
+                },
+                {
+                  "id": "new-era",
+                  "label": "New Era",
+                  "current": 359093,
+                  "base": 313322,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 197501,
+                      "base": 172327
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 161592,
+                      "base": 140995
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "acessorios",
+              "label": "Acessórios",
+              "current": 377993,
+              "base": 358082,
+              "children": [
+                {
+                  "id": "nike",
+                  "label": "Nike",
+                  "current": 234356,
+                  "base": 232753,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 128896,
+                      "base": 128014
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 105460,
+                      "base": 104739
+                    }
+                  ]
+                },
+                {
+                  "id": "new-era",
+                  "label": "New Era",
+                  "current": 143637,
+                  "base": 125329,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 79000,
+                      "base": 68931
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 64637,
+                      "base": 56398
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "mes": {
+        "aviso": "Cenário fictício: RBR · 20 lojas · 1–26 de outubro, 2026. Não representa resultados reais.",
+        "lojas": [
+          {
+            "loja": "rbr-0",
+            "nome": "Loja 01",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 277160,
+            "receitaAnterior": 267787,
+            "variacao": 9373,
+            "variacaoPct": 0.03500169911160736,
+            "notas": 1352,
+            "ticket": 205,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-1",
+            "nome": "Loja 02",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 312702,
+            "receitaAnterior": 296119,
+            "variacao": 16583,
+            "variacaoPct": 0.056001134678963525,
+            "notas": 1482,
+            "ticket": 211,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-2",
+            "nome": "Loja 03",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 349804,
+            "receitaAnterior": 428681,
+            "variacao": -78877,
+            "variacaoPct": -0.1839992908479732,
+            "notas": 1612,
+            "ticket": 217,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-3",
+            "nome": "Loja 04",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 388466,
+            "receitaAnterior": 353794,
+            "variacao": 34672,
+            "variacaoPct": 0.09800053138266901,
+            "notas": 1742,
+            "ticket": 223,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-4",
+            "nome": "Loja 05",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 428688,
+            "receitaAnterior": 383099,
+            "variacao": 45589,
+            "variacaoPct": 0.11900057165380228,
+            "notas": 1872,
+            "ticket": 229,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-5",
+            "nome": "Loja 06",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 470470,
+            "receitaAnterior": 454560,
+            "variacao": 15910,
+            "variacaoPct": 0.0350008799718409,
+            "notas": 2002,
+            "ticket": 235,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-6",
+            "nome": "Loja 07",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 513812,
+            "receitaAnterior": 565872,
+            "variacao": -52060,
+            "variacaoPct": -0.09199960415076201,
+            "notas": 2132,
+            "ticket": 241,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-7",
+            "nome": "Loja 08",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 558714,
+            "receitaAnterior": 518769,
+            "variacao": 39945,
+            "variacaoPct": 0.07699958941262874,
+            "notas": 2262,
+            "ticket": 247,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-8",
+            "nome": "Loja 09",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 605176,
+            "receitaAnterior": 551162,
+            "variacao": 54014,
+            "variacaoPct": 0.09800022497922571,
+            "notas": 2392,
+            "ticket": 253,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-9",
+            "nome": "Loja 10",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 653198,
+            "receitaAnterior": 583734,
+            "variacao": 69464,
+            "variacaoPct": 0.11899940726426762,
+            "notas": 2522,
+            "ticket": 259,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-10",
+            "nome": "Loja 11",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 702780,
+            "receitaAnterior": 679014,
+            "variacao": 23766,
+            "variacaoPct": 0.035000751089079164,
+            "notas": 2652,
+            "ticket": 265,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-11",
+            "nome": "Loja 12",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 753922,
+            "receitaAnterior": 713941,
+            "variacao": 39981,
+            "variacaoPct": 0.056000425805493734,
+            "notas": 2782,
+            "ticket": 271,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-12",
+            "nome": "Loja 13",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 806624,
+            "receitaAnterior": 748955,
+            "variacao": 57669,
+            "variacaoPct": 0.07699928567136878,
+            "notas": 2912,
+            "ticket": 277,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-13",
+            "nome": "Loja 14",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 860886,
+            "receitaAnterior": 784049,
+            "variacao": 76837,
+            "variacaoPct": 0.09800025253523696,
+            "notas": 3042,
+            "ticket": 283,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-14",
+            "nome": "Loja 15",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 916708,
+            "receitaAnterior": 819221,
+            "variacao": 97487,
+            "variacaoPct": 0.11899963501912182,
+            "notas": 3172,
+            "ticket": 289,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-15",
+            "nome": "Loja 16",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 974090,
+            "receitaAnterior": 941150,
+            "variacao": 32940,
+            "variacaoPct": 0.03499973436752909,
+            "notas": 3302,
+            "ticket": 295,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-16",
+            "nome": "Loja 17",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 1033032,
+            "receitaAnterior": 978250,
+            "variacao": 54782,
+            "variacaoPct": 0.056,
+            "notas": 3432,
+            "ticket": 301,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-17",
+            "nome": "Loja 18",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 1093534,
+            "receitaAnterior": 1015352,
+            "variacao": 78182,
+            "variacaoPct": 0.07699989757246747,
+            "notas": 3562,
+            "ticket": 307,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "rbr-18",
+            "nome": "Loja 19",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": null,
+            "receitaAnterior": null,
+            "variacao": null,
+            "variacaoPct": null,
+            "notas": null,
+            "ticket": null,
+            "ultimaLeitura": null,
+            "situacao": {
+              "rotulo": "Sem dados",
+              "tom": "warning"
+            }
+          },
+          {
+            "loja": "rbr-19",
+            "nome": "Loja 20",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": null,
+            "receitaAnterior": null,
+            "variacao": null,
+            "variacaoPct": null,
+            "notas": null,
+            "ticket": null,
+            "ultimaLeitura": null,
+            "situacao": {
+              "rotulo": "Sem dados",
+              "tom": "warning"
+            }
+          }
+        ],
+        "indicadores": {
+          "receita": 11699766,
+          "receitaAnterior": 11083509,
+          "variacaoReceita": 616257,
+          "notas": 44226,
+          "notasAnteriores": 42457,
+          "ticket": 264.5449735449736,
+          "ticketAnterior": 261.05257083637565,
+          "skusPorNota": 2.4,
+          "pecasPorNota": 2.6,
+          "precoPorPeca": 101.74806674806676
+        },
+        "ritmoDiario": [
+          {
+            "dia": "2026-10-01",
+            "realizado": 363126,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-02",
+            "realizado": 425123,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-03",
+            "realizado": 394125,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-04",
+            "realizado": 495977,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-05",
+            "realizado": 575688,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-06",
+            "realizado": 478264,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-07",
+            "realizado": 416267,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-08",
+            "realizado": 363126,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-09",
+            "realizado": 425123,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-10",
+            "realizado": 394125,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-11",
+            "realizado": 495977,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-12",
+            "realizado": 575688,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-13",
+            "realizado": 478264,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-14",
+            "realizado": 416267,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-15",
+            "realizado": 363126,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-16",
+            "realizado": 425123,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-17",
+            "realizado": 394125,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-18",
+            "realizado": 495977,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-19",
+            "realizado": 575688,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-20",
+            "realizado": 478264,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-21",
+            "realizado": 416267,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-22",
+            "realizado": 363126,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-23",
+            "realizado": 425123,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-24",
+            "realizado": 394125,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-25",
+            "realizado": 495977,
+            "meta": 474741
+          },
+          {
+            "dia": "2026-10-26",
+            "realizado": 575705,
+            "meta": 474741
+          }
+        ],
+        "meta": {
+          "metaDoPeriodo": 12343266,
+          "realizadoSobreMeta": 0.9478663102618059
+        },
+        "cobertura": {
+          "comDados": 18,
+          "total": 20,
+          "semLeitura": [
+            "Loja 19",
+            "Loja 20"
+          ]
+        },
+        "totalDaTabela": {
+          "rotulo": "Total das lojas com dados",
+          "receita": 11699766,
+          "notas": 44226
+        },
+        "prioridades": [
+          {
+            "numero": "01",
+            "etiqueta": "Alta prioridade",
+            "tom": "negative",
+            "titulo": "Investigar queda de notas",
+            "onde": "Loja 03",
+            "texto": "Receita abaixo do comparável. Confira volume e ticket antes de concluir a causa.",
+            "responsavel": "Comercial"
+          },
+          {
+            "numero": "02",
+            "etiqueta": "Revisão de estoque",
+            "tom": "accent",
+            "titulo": "Revisar a grade de tamanhos",
+            "onde": "Loja 07",
+            "texto": "O estoque total pode esconder falta nos tamanhos que mais vendem.",
+            "responsavel": "Planejamento"
+          },
+          {
+            "numero": "03",
+            "etiqueta": "Confiança dos dados",
+            "tom": "info",
+            "titulo": "Conferir a cobertura dos dados",
+            "onde": "RBR · 20 lojas",
+            "texto": "2 lojas sem leitura neste cenário. Ausência não é venda zero.",
+            "responsavel": "Operações"
+          }
+        ],
+        "mix": {
+          "id": "root",
+          "label": "Todas as linhas",
+          "current": 11699766,
+          "base": 11083509,
+          "children": [
+            {
+              "id": "calcados",
+              "label": "Calçados",
+              "current": 6785864,
+              "base": 6428435,
+              "children": [
+                {
+                  "id": "nike",
+                  "label": "Nike",
+                  "current": 4207236,
+                  "base": 4178483,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 2313980,
+                      "base": 2298166
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 1893256,
+                      "base": 1880317
+                    }
+                  ]
+                },
+                {
+                  "id": "new-era",
+                  "label": "New Era",
+                  "current": 2578628,
+                  "base": 2249952,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 1418245,
+                      "base": 1237474
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 1160383,
+                      "base": 1012478
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "vestuario",
+              "label": "Vestuário",
+              "current": 3509930,
+              "base": 3325053,
+              "children": [
+                {
+                  "id": "nike",
+                  "label": "Nike",
+                  "current": 2176157,
+                  "base": 2161284,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 1196886,
+                      "base": 1188706
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 979271,
+                      "base": 972578
+                    }
+                  ]
+                },
+                {
+                  "id": "new-era",
+                  "label": "New Era",
+                  "current": 1333773,
+                  "base": 1163769,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 733575,
+                      "base": 640073
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 600198,
+                      "base": 523696
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "acessorios",
+              "label": "Acessórios",
+              "current": 1403972,
+              "base": 1330021,
+              "children": [
+                {
+                  "id": "nike",
+                  "label": "Nike",
+                  "current": 870463,
+                  "base": 864514,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 478755,
+                      "base": 475483
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 391708,
+                      "base": 389031
+                    }
+                  ]
+                },
+                {
+                  "id": "new-era",
+                  "label": "New Era",
+                  "current": 533509,
+                  "base": 465507,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 293430,
+                      "base": 256029
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 240079,
+                      "base": 209478
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "gp": {
+      "ontem": {
+        "aviso": "Cenário fictício: Gramado / Pedras Altas · 26 de outubro, 2026. Não representa resultados reais.",
+        "lojas": [
+          {
+            "loja": "gp-0",
+            "nome": "Gramado",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 10660,
+            "receitaAnterior": 10300,
+            "variacao": 360,
+            "variacaoPct": 0.03495145631067961,
+            "notas": 52,
+            "ticket": 205,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "gp-1",
+            "nome": "Pedras Altas",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 12027,
+            "receitaAnterior": 11389,
+            "variacao": 638,
+            "variacaoPct": 0.05601896566862762,
+            "notas": 57,
+            "ticket": 211,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          }
+        ],
+        "indicadores": {
+          "receita": 22687,
+          "receitaAnterior": 21689,
+          "variacaoReceita": 998,
+          "notas": 109,
+          "notasAnteriores": 105,
+          "ticket": 208.13761467889907,
+          "ticketAnterior": 206.56190476190477,
+          "skusPorNota": 2.4,
+          "pecasPorNota": 2.6,
+          "precoPorPeca": 80.05292872265349
+        },
+        "ritmoDiario": [
+          {
+            "dia": "2026-10-26",
+            "realizado": 22687,
+            "meta": 23935
+          }
+        ],
+        "meta": {
+          "metaDoPeriodo": 23935,
+          "realizadoSobreMeta": 0.9478587842072279
+        },
+        "cobertura": {
+          "comDados": 2,
+          "total": 2,
+          "semLeitura": []
+        },
+        "totalDaTabela": {
+          "rotulo": "Total das lojas com dados",
+          "receita": 22687,
+          "notas": 109
+        },
+        "prioridades": [
+          {
+            "numero": "01",
+            "etiqueta": "Alta prioridade",
+            "tom": "negative",
+            "titulo": "Investigar queda de notas",
+            "onde": "Pedras Altas",
+            "texto": "Receita abaixo do comparável. Confira volume e ticket antes de concluir a causa.",
+            "responsavel": "Comercial"
+          },
+          {
+            "numero": "02",
+            "etiqueta": "Revisão de estoque",
+            "tom": "accent",
+            "titulo": "Revisar a grade de tamanhos",
+            "onde": "Pedras Altas",
+            "texto": "O estoque total pode esconder falta nos tamanhos que mais vendem.",
+            "responsavel": "Planejamento"
+          },
+          {
+            "numero": "03",
+            "etiqueta": "Confiança dos dados",
+            "tom": "info",
+            "titulo": "Conferir a cobertura dos dados",
+            "onde": "Gramado / Pedras Altas",
+            "texto": "0 lojas sem leitura neste cenário. Ausência não é venda zero.",
+            "responsavel": "Operações"
+          }
+        ],
+        "mix": {
+          "id": "root",
+          "label": "Todas as linhas",
+          "current": 22687,
+          "base": 21689,
+          "children": [
+            {
+              "id": "calcados",
+              "label": "Calçados",
+              "current": 13158,
+              "base": 12580,
+              "children": [
+                {
+                  "id": "nike",
+                  "label": "Nike",
+                  "current": 8158,
+                  "base": 8177,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 4487,
+                      "base": 4497
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 3671,
+                      "base": 3680
+                    }
+                  ]
+                },
+                {
+                  "id": "new-era",
+                  "label": "New Era",
+                  "current": 5000,
+                  "base": 4403,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 2750,
+                      "base": 2422
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 2250,
+                      "base": 1981
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "vestuario",
+              "label": "Vestuário",
+              "current": 6806,
+              "base": 6507,
+              "children": [
+                {
+                  "id": "nike",
+                  "label": "Nike",
+                  "current": 4220,
+                  "base": 4230,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 2321,
+                      "base": 2327
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 1899,
+                      "base": 1903
+                    }
+                  ]
+                },
+                {
+                  "id": "new-era",
+                  "label": "New Era",
+                  "current": 2586,
+                  "base": 2277,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 1422,
+                      "base": 1252
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 1164,
+                      "base": 1025
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "acessorios",
+              "label": "Acessórios",
+              "current": 2723,
+              "base": 2602,
+              "children": [
+                {
+                  "id": "nike",
+                  "label": "Nike",
+                  "current": 1688,
+                  "base": 1691,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 928,
+                      "base": 930
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 760,
+                      "base": 761
+                    }
+                  ]
+                },
+                {
+                  "id": "new-era",
+                  "label": "New Era",
+                  "current": 1035,
+                  "base": 911,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 569,
+                      "base": 501
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 466,
+                      "base": 410
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "semana": {
+        "aviso": "Cenário fictício: Gramado / Pedras Altas · 20–26 de outubro, 2026. Não representa resultados reais.",
+        "lojas": [
+          {
+            "loja": "gp-0",
+            "nome": "Gramado",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 74620,
+            "receitaAnterior": 72097,
+            "variacao": 2523,
+            "variacaoPct": 0.03499452126995575,
+            "notas": 364,
+            "ticket": 205,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "gp-1",
+            "nome": "Pedras Altas",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 84189,
+            "receitaAnterior": 79724,
+            "variacao": 4465,
+            "variacaoPct": 0.05600571973307912,
+            "notas": 399,
+            "ticket": 211,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          }
+        ],
+        "indicadores": {
+          "receita": 158809,
+          "receitaAnterior": 151821,
+          "variacaoReceita": 6988,
+          "notas": 763,
+          "notasAnteriores": 732,
+          "ticket": 208.13761467889907,
+          "ticketAnterior": 207.40573770491804,
+          "skusPorNota": 2.4,
+          "pecasPorNota": 2.6,
+          "precoPorPeca": 80.05292872265349
+        },
+        "ritmoDiario": [
+          {
+            "dia": "2026-10-20",
+            "realizado": 18315,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-21",
+            "realizado": 21442,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-22",
+            "realizado": 19879,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-23",
+            "realizado": 25016,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-24",
+            "realizado": 29036,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-25",
+            "realizado": 24122,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-26",
+            "realizado": 20999,
+            "meta": 23935
+          }
+        ],
+        "meta": {
+          "metaDoPeriodo": 167545,
+          "realizadoSobreMeta": 0.9478587842072279
+        },
+        "cobertura": {
+          "comDados": 2,
+          "total": 2,
+          "semLeitura": []
+        },
+        "totalDaTabela": {
+          "rotulo": "Total das lojas com dados",
+          "receita": 158809,
+          "notas": 763
+        },
+        "prioridades": [
+          {
+            "numero": "01",
+            "etiqueta": "Alta prioridade",
+            "tom": "negative",
+            "titulo": "Investigar queda de notas",
+            "onde": "Pedras Altas",
+            "texto": "Receita abaixo do comparável. Confira volume e ticket antes de concluir a causa.",
+            "responsavel": "Comercial"
+          },
+          {
+            "numero": "02",
+            "etiqueta": "Revisão de estoque",
+            "tom": "accent",
+            "titulo": "Revisar a grade de tamanhos",
+            "onde": "Pedras Altas",
+            "texto": "O estoque total pode esconder falta nos tamanhos que mais vendem.",
+            "responsavel": "Planejamento"
+          },
+          {
+            "numero": "03",
+            "etiqueta": "Confiança dos dados",
+            "tom": "info",
+            "titulo": "Conferir a cobertura dos dados",
+            "onde": "Gramado / Pedras Altas",
+            "texto": "0 lojas sem leitura neste cenário. Ausência não é venda zero.",
+            "responsavel": "Operações"
+          }
+        ],
+        "mix": {
+          "id": "root",
+          "label": "Todas as linhas",
+          "current": 158809,
+          "base": 151821,
+          "children": [
+            {
+              "id": "calcados",
+              "label": "Calçados",
+              "current": 92109,
+              "base": 88056,
+              "children": [
+                {
+                  "id": "nike",
+                  "label": "Nike",
+                  "current": 57108,
+                  "base": 57236,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 31409,
+                      "base": 31480
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 25699,
+                      "base": 25756
+                    }
+                  ]
+                },
+                {
+                  "id": "new-era",
+                  "label": "New Era",
+                  "current": 35001,
+                  "base": 30820,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 19251,
+                      "base": 16951
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 15750,
+                      "base": 13869
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "vestuario",
+              "label": "Vestuário",
+              "current": 47643,
+              "base": 45546,
+              "children": [
+                {
+                  "id": "nike",
+                  "label": "Nike",
+                  "current": 29539,
+                  "base": 29605,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 16246,
+                      "base": 16283
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 13293,
+                      "base": 13322
+                    }
+                  ]
+                },
+                {
+                  "id": "new-era",
+                  "label": "New Era",
+                  "current": 18104,
+                  "base": 15941,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 9957,
+                      "base": 8768
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 8147,
+                      "base": 7173
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "acessorios",
+              "label": "Acessórios",
+              "current": 19057,
+              "base": 18219,
+              "children": [
+                {
+                  "id": "nike",
+                  "label": "Nike",
+                  "current": 11815,
+                  "base": 11842,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 6498,
+                      "base": 6513
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 5317,
+                      "base": 5329
+                    }
+                  ]
+                },
+                {
+                  "id": "new-era",
+                  "label": "New Era",
+                  "current": 7242,
+                  "base": 6377,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 3983,
+                      "base": 3507
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 3259,
+                      "base": 2870
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "mes": {
+        "aviso": "Cenário fictício: Gramado / Pedras Altas · 1–26 de outubro, 2026. Não representa resultados reais.",
+        "lojas": [
+          {
+            "loja": "gp-0",
+            "nome": "Gramado",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 277160,
+            "receitaAnterior": 267787,
+            "variacao": 9373,
+            "variacaoPct": 0.03500169911160736,
+            "notas": 1352,
+            "ticket": 205,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          },
+          {
+            "loja": "gp-1",
+            "nome": "Pedras Altas",
+            "subrotulo": "Unidade demonstrativa",
+            "receita": 312702,
+            "receitaAnterior": 296119,
+            "variacao": 16583,
+            "variacaoPct": 0.056001134678963525,
+            "notas": 1482,
+            "ticket": 211,
+            "ultimaLeitura": "2026-10-26T06:00:00-03:00",
+            "situacao": null
+          }
+        ],
+        "indicadores": {
+          "receita": 589862,
+          "receitaAnterior": 563906,
+          "variacaoReceita": 25956,
+          "notas": 2834,
+          "notasAnteriores": 2721,
+          "ticket": 208.13761467889907,
+          "ticketAnterior": 207.24219037118706,
+          "skusPorNota": 2.4,
+          "pecasPorNota": 2.6,
+          "precoPorPeca": 80.05292872265349
+        },
+        "ritmoDiario": [
+          {
+            "dia": "2026-10-01",
+            "realizado": 18307,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-02",
+            "realizado": 21433,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-03",
+            "realizado": 19870,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-04",
+            "realizado": 25005,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-05",
+            "realizado": 29024,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-06",
+            "realizado": 24112,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-07",
+            "realizado": 20986,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-08",
+            "realizado": 18307,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-09",
+            "realizado": 21433,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-10",
+            "realizado": 19870,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-11",
+            "realizado": 25005,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-12",
+            "realizado": 29024,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-13",
+            "realizado": 24112,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-14",
+            "realizado": 20986,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-15",
+            "realizado": 18307,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-16",
+            "realizado": 21433,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-17",
+            "realizado": 19870,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-18",
+            "realizado": 25005,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-19",
+            "realizado": 29024,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-20",
+            "realizado": 24112,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-21",
+            "realizado": 20986,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-22",
+            "realizado": 18307,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-23",
+            "realizado": 21433,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-24",
+            "realizado": 19870,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-25",
+            "realizado": 25005,
+            "meta": 23935
+          },
+          {
+            "dia": "2026-10-26",
+            "realizado": 29036,
+            "meta": 23935
+          }
+        ],
+        "meta": {
+          "metaDoPeriodo": 622310,
+          "realizadoSobreMeta": 0.9478587842072279
+        },
+        "cobertura": {
+          "comDados": 2,
+          "total": 2,
+          "semLeitura": []
+        },
+        "totalDaTabela": {
+          "rotulo": "Total das lojas com dados",
+          "receita": 589862,
+          "notas": 2834
+        },
+        "prioridades": [
+          {
+            "numero": "01",
+            "etiqueta": "Alta prioridade",
+            "tom": "negative",
+            "titulo": "Investigar queda de notas",
+            "onde": "Pedras Altas",
+            "texto": "Receita abaixo do comparável. Confira volume e ticket antes de concluir a causa.",
+            "responsavel": "Comercial"
+          },
+          {
+            "numero": "02",
+            "etiqueta": "Revisão de estoque",
+            "tom": "accent",
+            "titulo": "Revisar a grade de tamanhos",
+            "onde": "Pedras Altas",
+            "texto": "O estoque total pode esconder falta nos tamanhos que mais vendem.",
+            "responsavel": "Planejamento"
+          },
+          {
+            "numero": "03",
+            "etiqueta": "Confiança dos dados",
+            "tom": "info",
+            "titulo": "Conferir a cobertura dos dados",
+            "onde": "Gramado / Pedras Altas",
+            "texto": "0 lojas sem leitura neste cenário. Ausência não é venda zero.",
+            "responsavel": "Operações"
+          }
+        ],
+        "mix": {
+          "id": "root",
+          "label": "Todas as linhas",
+          "current": 589862,
+          "base": 563906,
+          "children": [
+            {
+              "id": "calcados",
+              "label": "Calçados",
+              "current": 342120,
+              "base": 327065,
+              "children": [
+                {
+                  "id": "nike",
+                  "label": "Nike",
+                  "current": 212114,
+                  "base": 212592,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 116663,
+                      "base": 116926
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 95451,
+                      "base": 95666
+                    }
+                  ]
+                },
+                {
+                  "id": "new-era",
+                  "label": "New Era",
+                  "current": 130006,
+                  "base": 114473,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 71503,
+                      "base": 62960
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 58503,
+                      "base": 51513
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "vestuario",
+              "label": "Vestuário",
+              "current": 176959,
+              "base": 169172,
+              "children": [
+                {
+                  "id": "nike",
+                  "label": "Nike",
+                  "current": 109715,
+                  "base": 109962,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 60343,
+                      "base": 60479
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 49372,
+                      "base": 49483
+                    }
+                  ]
+                },
+                {
+                  "id": "new-era",
+                  "label": "New Era",
+                  "current": 67244,
+                  "base": 59210,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 36984,
+                      "base": 32566
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 30260,
+                      "base": 26644
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "acessorios",
+              "label": "Acessórios",
+              "current": 70783,
+              "base": 67669,
+              "children": [
+                {
+                  "id": "nike",
+                  "label": "Nike",
+                  "current": 43885,
+                  "base": 43985,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 24137,
+                      "base": 24192
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 19748,
+                      "base": 19793
+                    }
+                  ]
+                },
+                {
+                  "id": "new-era",
+                  "label": "New Era",
+                  "current": 26898,
+                  "base": 23684,
+                  "children": [
+                    {
+                      "id": "ref01",
+                      "label": "Referência Demo 01",
+                      "current": 14794,
+                      "base": 13026
+                    },
+                    {
+                      "id": "ref02",
+                      "label": "Referência Demo 02",
+                      "current": 12104,
+                      "base": 10658
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

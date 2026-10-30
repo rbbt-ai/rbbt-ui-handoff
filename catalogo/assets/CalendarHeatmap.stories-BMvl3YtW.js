@@ -1,0 +1,40 @@
+import{n as e,r as t}from"./rolldown-runtime-sJBDdmOt.js";import{En as n,On as r,bt as i,t as a,vt as o,x as s}from"./src-lgDrkLBh.js";import{t as c}from"./jsx-runtime-MKhVqBIO.js";import{n as l,t as u}from"./calendar-days-B62xgXO-.js";import{a as d,o as f}from"./fixtures-heatmap-CMRqa3v6.js";import{n as p,t as m}from"./smooth-decorator-DsOGrokP.js";function h(e){let t=Math.sin(e*12.9898+78.233)*43758.5453;return t-Math.floor(t)}function g(e={}){let t=e.absent??!0;return{days:n(v,y).map((e,n)=>{if(t&&b.includes(e))return{day:e,value:null};let r=new Date(`${e}T12:00:00Z`).getUTCDay(),i=e>=`2026-09-25`&&e<=`2026-10-04`?1.22:1,a=41e3*x[r]*(.86+h(n)*.28)*i*(S[e]??1);return{day:e,value:Math.round(a/10)*10}}),from:v,to:y}}var _,v,y,b,x,S,C,w;function T(){return(T=e((()=>{a(),_={period:`Ago–Out 2026`,scope:`18 lojas`,source:`ERP fictício`},v=`2026-08-01`,y=`2026-10-28`,b=[`2026-08-27`,`2026-10-15`,`2026-10-16`],x=[.62,.78,.82,.86,.94,1.08,1.32],S={"2026-08-08":1.35,"2026-08-09":1.25,"2026-10-08":1.3,"2026-10-10":1.45,"2026-10-11":1.3,"2026-10-12":1.6,"2026-10-23":1.55,"2026-10-24":1.7,"2026-10-25":1.5},C={promocao:{label:`Promoção`,tone:`accent`,mark:`ring`},"data-comercial":{label:`Data comercial`,tone:`warning`,mark:`dot`},loja:{label:`Loja`,tone:`positive`,mark:`ring`},feira:{label:`Feira`,tone:`neutral`,mark:`ring`}},w=[{id:`E01`,start:`2026-08-09`,type:`data-comercial`,label:`Dia dos Pais`,description:`Segundo domingo de agosto.`},{id:`E02`,start:`2026-08-18`,end:`2026-08-21`,type:`feira`,label:`Feira de calçados`,title:`Feira de calçados de Franca`,description:`Equipe de compras fora; vitrine nova chega no fim da feira.`},{id:`E03`,start:`2026-09-25`,end:`2026-10-04`,type:`promocao`,label:`Liquidação de primavera`,description:`Até 40% na coleção de inverno, em todas as lojas.`},{id:`E04`,start:`2026-10-08`,type:`loja`,label:`Inauguração loja Savassi`,priority:`high`,description:`18ª loja da rede.`},{id:`E05`,start:`2026-10-12`,type:`data-comercial`,label:`Dia das Crianças`,priority:`high`},{id:`E06`,start:`2026-10-23`,end:`2026-10-25`,type:`promocao`,label:`Black Friday antecipada`,priority:`high`,description:`Pré-venda para o clube de clientes.`}]})))()}var E=t({Escuro:()=>I,Estados:()=>F,Estreito360:()=>z,Glass:()=>L,GlassEscuro:()=>R,Padrao:()=>N,Tabela:()=>P,VariosMeses:()=>B,__namedExportsOrder:()=>V,default:()=>M});function D({dados:e=`com-ausencia`,...t}){return(0,k.jsxs)(o,{children:[(0,k.jsx)(s,{...t,data:t.data??g({absent:e===`com-ausencia`})}),(0,k.jsx)(O,{})]})}function O(){let e=i();return(0,k.jsx)(`button`,{type:`button`,className:`rb-heat-story__replay rb-focus-ring`,onClick:e,children:`Tocar a entrada de novo`})}var k,A,j,M,N,P,F,I,L,R,z,B,V;function H(){return(H=e((()=>{l(),a(),T(),d(),m(),k=c(),{fn:A}=__STORYBOOK_MODULE_TEST__,j=(e,t)=>(0,k.jsx)(r,{client:f,mode:t.globals.rbMode??`light`,className:`rb-heat-story`,children:(0,k.jsx)(e,{})}),M={title:`Widgets/Calendário de calor`,id:`widgets-calendar-heatmap`,component:s,tags:[`autodocs`],parameters:{docs:{description:{component:`Calendário de calor com eventos marcados: dias em semanas × dias da semana, na escala quente e com a hachura do mapa de calor. Ausência tracejada (nunca zero), dias fora do período lisos, eventos de um dia ou de intervalo com anel ou ponto e lista ao lado. Visão por mês (Page Up/Page Down) e de vários meses, teclado, balão e tabela. Cliente fictício: Pedravela Calçados.`}}},args:{title:`Receita diária`,icon:(0,k.jsx)(u,{}),period:_.period,scope:_.scope,source:_.source,metricLabel:`Receita`,format:{style:`currency`,currency:`BRL`,maximumFractionDigits:0},events:w,eventTypes:C,locale:`pt-BR`,dados:`com-ausencia`,onViewChange:A(),onMonthChange:A(),onDisplayChange:A()},argTypes:{status:{control:`inline-radio`,options:[`ready`,`loading`,`empty`,`error`,`restricted`,`partial`,`stale`]},defaultView:{control:`inline-radio`,options:[`month`,`months`]},defaultDisplay:{control:`inline-radio`,options:[`calendar`,`table`]},weekStart:{control:`inline-radio`,options:[0,1]},maxMonths:{control:{type:`number`,min:1,max:6}},dados:{control:`inline-radio`,options:[`com-ausencia`,`limpos`],description:`Dados da história.`},icon:{control:!1},data:{control:!1},events:{control:!1},eventTypes:{control:!1},messages:{control:!1}},decorators:[p,j,(e,t)=>(0,k.jsx)(`div`,{style:{width:t.parameters.width===`narrow`?360:880,maxWidth:`100%`},children:(0,k.jsx)(e,{})})],render:e=>(0,k.jsx)(D,{...e})},N={name:`Padrão`},P={args:{defaultDisplay:`table`}},F={render:e=>(0,k.jsxs)(`div`,{className:`rb-heat-story__states`,style:{gridTemplateColumns:`minmax(0, 1fr)`},children:[(0,k.jsx)(s,{...e,title:`Carregando`,status:`loading`,data:g()}),(0,k.jsx)(s,{...e,title:`Vazio`,status:`empty`,data:null}),(0,k.jsx)(s,{...e,title:`Erro`,status:`error`,data:null,onRetry:()=>{}}),(0,k.jsx)(s,{...e,title:`Parcial`,status:`partial`,partialNote:`2 lojas ainda não enviaram as vendas de 15 e 16/10.`,scope:`16 de 18 lojas`,data:g()})]})},I={globals:{rbMode:`dark`}},L={globals:{rbFamily:`glass`}},R={name:`Glass escuro`,globals:{rbFamily:`glass`,rbMode:`dark`}},z={name:`Estreito 360`,parameters:{width:`narrow`}},B={name:`Vários meses`,args:{defaultView:`months`}},V=[`Padrao`,`Tabela`,`Estados`,`Escuro`,`Glass`,`GlassEscuro`,`Estreito360`,`VariosMeses`],N.parameters={...N.parameters,docs:{...N.parameters?.docs,source:{originalSource:`{
+  name: "Padrão"
+}`,...N.parameters?.docs?.source},description:{story:`Padrão: outubro, com a liquidação que vem de setembro, a inauguração, o Dia das Crianças e a Black Friday antecipada.`,...N.parameters?.docs?.description}}},P.parameters={...P.parameters,docs:{...P.parameters?.docs,source:{originalSource:`{
+  args: {
+    defaultDisplay: "table"
+  }
+}`,...P.parameters?.docs?.source},description:{story:`A alternativa em tabela: data, receita (ou "Sem leitura") e eventos do dia, com total.`,...P.parameters?.docs?.description}}},F.parameters={...F.parameters,docs:{...F.parameters?.docs,source:{originalSource:`{
+  render: args => <div className="rb-heat-story__states" style={{
+    gridTemplateColumns: "minmax(0, 1fr)"
+  }}>
+      <CalendarHeatmap {...args} title="Carregando" status="loading" data={calendarData()} />
+      <CalendarHeatmap {...args} title="Vazio" status="empty" data={null} />
+      <CalendarHeatmap {...args} title="Erro" status="error" data={null} onRetry={() => {}} />
+      <CalendarHeatmap {...args} title="Parcial" status="partial" partialNote="2 lojas ainda não enviaram as vendas de 15 e 16/10." scope="16 de 18 lojas" data={calendarData()} />
+    </div>
+}`,...F.parameters?.docs?.source},description:{story:`Carregando, vazio, erro e parcial.`,...F.parameters?.docs?.description}}},I.parameters={...I.parameters,docs:{...I.parameters?.docs,source:{originalSource:`{
+  globals: {
+    rbMode: "dark"
+  }
+}`,...I.parameters?.docs?.source},description:{story:`Modo escuro.`,...I.parameters?.docs?.description}}},L.parameters={...L.parameters,docs:{...L.parameters?.docs,source:{originalSource:`{
+  globals: {
+    rbFamily: "glass"
+  }
+}`,...L.parameters?.docs?.source},description:{story:`Família Glass, claro.`,...L.parameters?.docs?.description}}},R.parameters={...R.parameters,docs:{...R.parameters?.docs,source:{originalSource:`{
+  name: "Glass escuro",
+  globals: {
+    rbFamily: "glass",
+    rbMode: "dark"
+  }
+}`,...R.parameters?.docs?.source},description:{story:`Família Glass, escuro.`,...R.parameters?.docs?.description}}},z.parameters={...z.parameters,docs:{...z.parameters?.docs,source:{originalSource:`{
+  name: "Estreito 360",
+  parameters: {
+    width: "narrow"
+  }
+}`,...z.parameters?.docs?.source},description:{story:`Celular a 360 px: o mês inteiro sem rolagem lateral, a lista de eventos embaixo.`,...z.parameters?.docs?.description}}},B.parameters={...B.parameters,docs:{...B.parameters?.docs,source:{originalSource:`{
+  name: "Vários meses",
+  args: {
+    defaultView: "months"
+  }
+}`,...B.parameters?.docs?.source},description:{story:`Vários meses: agosto a outubro lado a lado, com a feira de agosto e a liquidação atravessando setembro e outubro.`,...B.parameters?.docs?.description}}}})))()}export{N as n,H as r,E as t};
