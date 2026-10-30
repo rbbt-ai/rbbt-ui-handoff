@@ -10,7 +10,11 @@ Ambiente: Node 22.22.0, npm 10.9.4, macOS, Chromium do Playwright.
 
 ## Verificação de portabilidade
 
-Clone local do kit, integridade, scaffold e instalação pelo lockfile: em validação antes do envio remoto. Resultado final será registrado neste documento.
+Clone Git limpo em outro diretório: integridade do manifesto, `npm run init`, `npm ci`, `npm run typecheck` e `npm run build` passaram. A dependência foi resolvida pelo tarball relativo do próprio kit, sem acesso ao código-fonte do UI Studio.
+
+O scaffold compilado abriu no Chromium com a versão rc.6 visível e sem erros de página. Uma segunda execução de `init` recusou sobrescrever o projeto existente. Evidências: `evidencias/clone-check.json`, `evidencias/scaffold-check.json` e `evidencias/scaffold.png`.
+
+Quatro capturas do catálogo/receita foram abertas e revisadas; a captura do Estoque em modo escuro foi feita a 360 px. A história do CalendarHeatmap também foi examinada diretamente com axe: nenhuma violação no estado inicial (`evidencias/catalogo-axe.json`). Isso não substitui os testes dos demais estados e detalhes apontados nas ressalvas.
 
 ## Limites da evidência
 

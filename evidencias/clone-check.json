@@ -1,0 +1,9 @@
+{
+  "localGitClone": true,
+  "manifest": true,
+  "init": true,
+  "npmCi": true,
+  "typecheck": true,
+  "build": true,
+  "initRefusesOverwrite": true
+}
