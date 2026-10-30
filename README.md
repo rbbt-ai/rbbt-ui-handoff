@@ -7,13 +7,15 @@ Kit de consumo de **@rbbt/ui 0.5.0-rc.6**, baseado no commit de origem `abf232f8
 Pré-requisitos: acesso de leitura ao repositório privado, Git, Node **>=22.12.0** e npm. Referência validada: Node 22.22.0 / npm 10.9.4. A instalação inicial baixa dependências do npm; o catálogo incluído funciona localmente sem rebuild e sem acesso ao Ravi.
 
 ```sh
-git clone git@github.com:rbbt-ai/rbbt-ui-handoff.git
+git clone https://github.com/rbbt-ai/rbbt-ui-handoff.git
 cd rbbt-ui-handoff
 git rev-parse HEAD
 # Se usa nvm: nvm install && nvm use
 npm run verify
 npm run catalogo
 ```
+
+O clone privado exige autenticação GitHub na máquina do Michael. Se ele usa SSH configurado, pode usar `git@github.com:rbbt-ai/rbbt-ui-handoff.git` como alternativa. Nunca grave tokens no repositório.
 
 Abra http://127.0.0.1:4400/catalogo/. Em outro terminal, na raiz do repositório:
 
