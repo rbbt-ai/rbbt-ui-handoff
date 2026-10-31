@@ -1,0 +1,37 @@
+{
+  "source": "Downloaded published catalog bytes and clean kit scaffold",
+  "checks": [
+    {
+      "name": "catalogo-rc8",
+      "errors": [],
+      "failedResponses": [],
+      "overflow": false,
+      "violations": [],
+      "versionVisible": true
+    },
+    {
+      "name": "insight-card",
+      "errors": [],
+      "failedResponses": [],
+      "overflow": false,
+      "violations": [],
+      "versionVisible": true
+    },
+    {
+      "name": "minigraficos-360",
+      "errors": [],
+      "failedResponses": [],
+      "overflow": false,
+      "violations": [],
+      "versionVisible": true
+    },
+    {
+      "name": "scaffold-rc8",
+      "errors": [],
+      "failedResponses": [],
+      "overflow": false,
+      "violations": [],
+      "versionVisible": true
+    }
+  ]
+}

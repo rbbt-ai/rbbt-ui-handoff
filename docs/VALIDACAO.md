@@ -2,7 +2,7 @@
 
 Ambiente: Node 22.22.0, npm 10.9.4, macOS e Chromium.
 
-Fonte: código aprovado eb89f81, preparação de dependência/lockfile e documentação e682f09. Instalação limpa com npm ci, build da biblioteca/demos, typecheck e catálogo completo passaram. Catálogo com 360 entradas; varredura de marca NBA nos arquivos públicos sem ocorrências.
+Fonte: código aprovado eb89f81, preparação de dependência/lockfile e documentação e682f09; rótulo da versão na galeria corrigido em 47cb8e6. Instalação limpa com npm ci, build da biblioteca/demos, typecheck e catálogo completo passaram. Catálogo com 360 entradas; varredura de marca NBA nos arquivos públicos sem ocorrências.
 
 Pacote testado como consumidor externo: conteúdo, tipos Bundler/NodeNext, build, CSS e fontes. Exemplo da receita: 146/146 verificações em seis módulos, desktop/celular, claro/escuro, axe, URL e console. Evidência em evidencias/rc8/pack-report.json.
 
@@ -11,3 +11,14 @@ Pacote testado como consumidor externo: conteúdo, tipos Bundler/NodeNext, build
 Os testes da receita são sobre o exemplo fictício Pedravela. Não são a reconstrução NBA do Michael, que permanece pendente. Safari, Firefox e leitor de tela não têm validação completa. Ressalvas dos widgets em ESCOPO-E-LIMITES.md.
 
 As evidências da entrega rc.6 permanecem identificadas em evidencias/rc6/ e no histórico Git; não são apresentadas como testes novos da rc.8.
+
+## Validação da entrega e portabilidade
+
+- Catálogo: 28 testes passaram em desktop/celular; dois casos de teclado exclusivos de desktop foram pulados no celular. Receita no catálogo: 8/8.
+- Cache: 3/3 testes gerais, mais 1/1 específico saindo dos bytes da release 19 (rc.2) para rc.8 no mesmo navegador. O teste antigo fixo da release 16 não foi usado como substituto dessa prova.
+- Clone Git limpo do kit: manifesto, init, npm ci, typecheck e build passaram. Caminhos do tarball são relativos; não foi necessário acesso ao código da biblioteca.
+- Catálogo rc.8 publicado em https://rbbt-rbbt-ui-studio.ravi.page/catalogo/ (release 21). Outras quatro rotas mantiveram artifactVersionId e visibilidade.
+
+- Após a publicação final, 159/159 arquivos baixados coincidem byte a byte com o build e com o catálogo deste kit.
+- Os 125 hashes dos insumos originais rc.2 foram conferidos sem divergência.
+- Renderização dos bytes publicados: galeria, InsightCard e tabela a 360 px passaram sem erros de JavaScript, recursos HTTP com erro ou rolagem lateral. Axe sem violações nos dois widgets. Scaffold do clone limpo renderizou rc.8. Capturas e resultados em evidencias/rc8/.

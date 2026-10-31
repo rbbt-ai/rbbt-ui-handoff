@@ -1,6 +1,8 @@
 # Rbbt UI · handoff para Michael
 
-Kit de consumo de **@rbbt/ui 0.5.0-rc.8**, baseado no commit de origem `e682f098357365dba6b2e5f28c2f691fa371af87`. Contém a biblioteca compilada, catálogo da mesma versão, receita, tema NBA e dados fictícios. O Michael reconstrói o workspace em outra máquina e devolve as lacunas.
+Kit de consumo de **@rbbt/ui 0.5.0-rc.8**, baseado no commit de origem `47cb8e6df8321e1e6ad3fe02ab99e55a8ecfbe1d`. Contém a biblioteca compilada, catálogo da mesma versão, receita, tema NBA e dados fictícios. O Michael reconstrói o workspace em outra máquina e devolve as lacunas.
+
+Catálogo público da mesma versão: https://rbbt-rbbt-ui-studio.ravi.page/catalogo/
 
 ## Começar
 
