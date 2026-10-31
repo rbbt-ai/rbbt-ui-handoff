@@ -1,0 +1,5 @@
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{t}from"./jsx-runtime-MKhVqBIO.js";import{i as n,r}from"./react-DITjJg24.js";import{c as i,l as a,n as o,r as s,s as c}from"./blocks-xXZRVd7y.js";import{n as l,t as u}from"./evolution-chart-BbW3-676.js";import{i as d,s as f,u as p}from"./EvolutionChart.stories-DKumu9YF.js";function m(e){let t={h2:`h2`,...n(),...e.components};return(0,g.jsxs)(g.Fragment,{children:[(0,g.jsx)(i,{of:d,name:`Contrato`}),`
+`,(0,g.jsx)(s,{of:f}),`
+`,(0,g.jsx)(c,{children:u}),`
+`,(0,g.jsx)(t.h2,{id:`referência-de-props-gerada`,children:`Referência de props (gerada)`}),`
+`,(0,g.jsx)(o,{of:d})]})}function h(e={}){let{wrapper:t}={...n(),...e.components};return t?(0,g.jsx)(t,{...e,children:(0,g.jsx)(m,{...e})}):m(e)}var g;function _(){return(_=e((()=>{g=t(),r(),a(),l(),p()})))()}_();export{h as default};

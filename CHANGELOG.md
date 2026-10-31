@@ -1,5 +1,13 @@
 # Histórico da entrega
 
+## 2026-10-30 · Atualização · 0.5.0-rc.8
+
+- Biblioteca, catálogo e receita atualizados juntos para os Lotes 0–5 aprovados.
+- Entram decisão/efeito/raio-X, tabela com minigráficos e InsightCard.
+- Scaffold e lockfile fixam o novo tarball; projetos existentes migram explicitamente.
+- Lote 6 continua bloqueado; reconstrução independente do Michael permanece pendente.
+- Evidências da rc.6 preservadas em evidencias/rc6/.
+
 ## 2026-10-30 · Primeiro kit · 0.5.0-rc.6
 
 - Pacote e catálogo alinhados com os Lotes 0–3 do commit abf232f.

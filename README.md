@@ -1,10 +1,10 @@
-# Rbbt UI · handoff privado para Michael
+# Rbbt UI · handoff para Michael
 
-Kit de consumo de **@rbbt/ui 0.5.0-rc.6**, baseado no commit de origem `abf232f89c79888326c6a712f995209cb399ef67`. Contém a biblioteca compilada, catálogo da mesma versão, receita, tema NBA e dados fictícios. O Michael reconstrói o workspace em outra máquina e devolve as lacunas.
+Kit de consumo de **@rbbt/ui 0.5.0-rc.8**, baseado no commit de origem `e682f098357365dba6b2e5f28c2f691fa371af87`. Contém a biblioteca compilada, catálogo da mesma versão, receita, tema NBA e dados fictícios. O Michael reconstrói o workspace em outra máquina e devolve as lacunas.
 
 ## Começar
 
-Pré-requisitos: acesso de leitura ao repositório privado, Git, Node **>=22.12.0** e npm. Referência validada: Node 22.22.0 / npm 10.9.4. A instalação inicial baixa dependências do npm; o catálogo incluído funciona localmente sem rebuild e sem acesso ao Ravi.
+Pré-requisitos: Git, Node **>=22.12.0** e npm. Referência validada: Node 22.22.0 / npm 10.9.4. A instalação inicial baixa dependências do npm; o catálogo incluído funciona localmente sem rebuild e sem acesso ao Ravi.
 
 ```sh
 git clone https://github.com/rbbt-ai/rbbt-ui-handoff.git
@@ -15,12 +15,12 @@ npm run verify
 npm run catalogo
 ```
 
-O clone privado exige autenticação GitHub na máquina do Michael. Se ele usa SSH configurado, pode usar `git@github.com:rbbt-ai/rbbt-ui-handoff.git` como alternativa. Nunca grave tokens no repositório.
+O repositório é público por decisão de Thiago em 30/10/2026, para permitir acesso ao Michael. O clone HTTPS não exige autenticação. Escrita de branches e PRs depende das permissões da conta; nunca grave tokens no repositório.
 
 Abra http://127.0.0.1:4400/catalogo/. Em outro terminal, na raiz do repositório:
 
 ```sh
-git switch -c michael/workspace-nba-rc6
+git switch -c michael/workspace-nba-rc8
 npm run init
 cd workspace
 npm ci
@@ -43,14 +43,14 @@ Abra http://127.0.0.1:5173/workspaces/nba-glass-receita/. A tela inicial confirm
 ## Conteúdo
 
 - `packages/`: tarball instalável, sem acesso ao repositório de desenvolvimento.
-- `catalogo/`: Storybook estático da rc.6, incluindo contratos e exemplos fictícios.
+- `catalogo/`: Storybook estático da rc.8, incluindo contratos e exemplos fictícios.
 - `cliente-nba/`: tema e logo para a reconstrução privada; não fazem parte do pacote genérico.
 - `dados/`: cenários fictícios por recorte e período.
 - `templates/workspace/`: ambiente mínimo com dependências fixas e lockfile.
 - `scripts/`: integridade, servidor local e scaffold.
 - `MANIFEST.sha256`: hashes dos arquivos do kit; `workspace/` é a área de trabalho e fica fora do manifesto.
 
-Não é necessário instalar Ravi, ter conta no npm privado ou acessar o código do UI Studio. Não há credenciais ou dados de produção no kit. A biblioteca tem licença `UNLICENSED`: distribuição privada autorizada, sem concessão de licença pública.
+Não é necessário instalar Ravi, ter conta no npm privado ou acessar o código do UI Studio. Não há credenciais ou dados de produção no kit. A biblioteca tem licença `UNLICENSED`: distribuição do kit autorizada, sem concessão automática de licença de uso ou redistribuição.
 
 ## Retorno pelo Git
 
@@ -61,5 +61,15 @@ Construa em `workspace/`, faça commits pequenos e abra um PR com código, lockf
 Se tiver apenas leitura, peça acesso de escrita ao coordenador antes de enviar uma branch. Não mude a visibilidade do repositório. Não publique a aplicação ou a biblioteca neste exercício.
 
 ## Atualizações
+
+Para migrar um workspace existente da rc.6, a partir de `workspace/`:
+
+```sh
+npm install --save-exact ../packages/rbbt-ui-0.5.0-rc.8.tgz
+npm run typecheck
+npm run build
+```
+
+Repita os testes da aplicação e registre a atualização no PROVENANCE.md. Não execute `init` sobre um workspace existente. O tarball rc.6 permanece disponível para migração ou reversão.
 
 Cada atualização entra em PR com tarball, receita, catálogo, changelog e manifesto coerentes. Nunca substituir silenciosamente o tarball de uma entrega existente. Este primeiro ciclo usa commits, sem tags. `git pull` atualiza o kit, mas o projeto consumidor mantém sua dependência fixa: a migração requer atualizar o caminho/versão de `@rbbt/ui`, o lockfile e repetir os testes. Veja [docs/MANUTENCAO.md](docs/MANUTENCAO.md).

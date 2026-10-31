@@ -18,4 +18,4 @@ for (const line of readFileSync(resolve(root, 'MANIFEST.sha256'), 'utf8').trim()
   if (actual !== expected) throw new Error(`Hash divergente: ${name}`);
   count++;
 }
-console.log(`OK: ${count} arquivos íntegros. Versão 0.5.0-rc.6. O manifesto confere integridade; o commit identifica a entrega.`);
+console.log(`OK: ${count} arquivos íntegros. Versão 0.5.0-rc.8. O manifesto confere integridade; o commit identifica a entrega.`);

@@ -1,10 +1,10 @@
 # Origem desta entrega
 
-- Biblioteca: `@rbbt/ui` 0.5.0-rc.6.
-- Commit-base: `abf232f89c79888326c6a712f995209cb399ef67`.
-- Extração por Git archive, sem arquivos não commitados do desenvolvimento.
-- Tema NBA, logo e dados fictícios: cópia dos insumos congelados da rc.2. Originais preservados e conferidos pelo manifesto.
-- Alterações na cópia de build: dependência da demo interna ajustada de rc.2 para rc.6 e lockfile reconciliado; cabeçalho da receita e comando de instalação ajustados para rc.6/caminho portátil. Sem alteração de implementação dos componentes.
-- Pacote e catálogo reconstruídos após esse ajuste documental. O tarball desta entrega tem hash próprio no MANIFEST.sha256; não é apresentado como byte a byte idêntico ao tarball anterior da revisão interna.
-- O repositório de entrega adiciona documentação de operação, scripts portáteis e scaffold mínimo. Não distribui o repositório de desenvolvimento, memórias ou implementação pronta da demonstração NBA.
-- Use o commit deste repositório e o manifesto para identificar o conjunto exato que consumiu.
+- Biblioteca: `@rbbt/ui` 0.5.0-rc.8.
+- Código aprovado dos Lotes 0–5: `eb89f8106390ab66015a03cde02181f1d05f447d`.
+- Commit de preparação: `e682f098357365dba6b2e5f28c2f691fa371af87`, em worktree isolado. Alinha a dependência da demo e o lockfile à rc.8, atualiza a instalação na receita e corrige o link do contrato de minigráficos. Nenhuma implementação de componente foi alterada.
+- Pacote e catálogo reconstruídos do mesmo commit; o catálogo é o mesmo conjunto de arquivos destinado à publicação pública.
+- Tema NBA, logo e dados fictícios preservados do kit anterior, originados dos insumos congelados da rc.2. Originais permanecem intocados.
+- RECEITA.md copia a documentação desta versão com caminho relativo ao tarball do kit. Referências históricas à rc.2 permanecem identificadas.
+- O repositório distribui biblioteca compilada, documentação, catálogo e scaffold mínimo. Não contém o repositório-fonte da biblioteca nem a implementação pronta do workspace NBA.
+- O commit do kit e MANIFEST.sha256 identificam os bytes distribuídos. Evidências históricas rc.6 estão em evidencias/rc6/.
