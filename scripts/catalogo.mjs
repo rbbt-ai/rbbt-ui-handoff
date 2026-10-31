@@ -18,4 +18,4 @@ createServer((req, res) => {
   if (!existsSync(file) || !statSync(file).isFile()) { res.writeHead(404).end(); return; }
   res.writeHead(200, { 'content-type': mime[extname(file)] ?? 'application/octet-stream', 'cache-control': 'no-store' });
   createReadStream(file).pipe(res);
-}).listen(port, '127.0.0.1', () => console.log(`Catálogo rc.6: http://127.0.0.1:${port}/catalogo/ (Ctrl+C para encerrar)`));
+}).listen(port, '127.0.0.1', () => console.log(`Catálogo rc.8: http://127.0.0.1:${port}/catalogo/ (Ctrl+C para encerrar)`));

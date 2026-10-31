@@ -1,0 +1,38 @@
+import{n as e,r as t}from"./rolldown-runtime-sJBDdmOt.js";import{en as n,et as r,mr as i,nn as a,pr as o,t as s,xr as c}from"./src-BbyRaoY1.js";import{t as l}from"./jsx-runtime-MKhVqBIO.js";import{a as u,o as d}from"./fixtures-heatmap-Av-RnC91.js";import{n as f,t as p}from"./smooth-decorator-Ch0T28w-.js";var m,h;function g(){return(g=e((()=>{i(),m={name:`chart-spline`,size:24,node:[[`path`,{d:`M3 3v16a2 2 0 0 0 2 2h16`,key:`c24i48`}],[`path`,{d:`M7 16c.5-2 1.5-7 4-7 2 0 2 3 4 3 2.5 0 4.5-5 5-7`,key:`lw07rv`}]]},m.node,h=o(m)})))()}function _(e){let t=e>>>0;return()=>(t=t*1664525+1013904223>>>0,t/4294967296)}function v(){let e=[];return x.forEach((t,n)=>{let r=_(97+n*31);C.forEach((n,i)=>{let a=new Date(`${n}T12:00:00Z`).getUTCDay(),o=1+(r()-.5)*.08,s=Math.round(t.base*S[a]*(1+t.trend*(i/29))*o);e.push({loja:t.id,nome:t.label,dia:n,receita:t.absent?.includes(i+1)?null:s})})}),e}function y(e={}){let t=v();return{items:x.slice(0,e.stores??x.length).map(e=>({id:e.id,label:e.label,points:t.filter(t=>t.loja===e.id).map(e=>({day:e.dia,value:e.receita}))}))}}var b,x,S,C;function w(){return(w=e((()=>{b={period:`1–30 de out. 2026`,scope:`12 lojas`,source:`ERP fictício · vendas faturadas por dia`},x=[{id:`centro`,label:`Centro`,base:18400,trend:.06},{id:`jardins`,label:`Jardins`,base:22600,trend:.1},{id:`moema`,label:`Moema`,base:15800,trend:.02,absent:[12]},{id:`pinheiros`,label:`Pinheiros`,base:17100,trend:.14},{id:`vila-mariana`,label:`Vila Mariana`,base:12900,trend:-.03},{id:`tatuape`,label:`Tatuapé`,base:14300,trend:.04},{id:`santana`,label:`Santana`,base:11800,trend:-.22},{id:`lapa`,label:`Lapa`,base:10400,trend:-.17,absent:[30]},{id:`ipiranga`,label:`Ipiranga`,base:9700,trend:-.14},{id:`butanta`,label:`Butantã`,base:8900,trend:.03,absent:[20,21]},{id:`morumbi`,label:`Morumbi`,base:20300,trend:.01},{id:`aguas-claras`,label:`Shopping Parque das Águas Claras · Piso Térreo`,base:13600,trend:.08}],S=[1.22,.86,.9,.94,.98,1.08,1.3],C=Array.from({length:30},(e,t)=>`2026-10-${String(t+1).padStart(2,`0`)}`)})))()}var T=t({Escuro:()=>F,Estados:()=>P,Estreito360:()=>R,Glass:()=>I,GlassEscuro:()=>L,Padrao:()=>M,Tabela:()=>N,__namedExportsOrder:()=>z,default:()=>j});function E(e){return(0,O.jsxs)(n,{children:[(0,O.jsx)(r,{...e,data:e.data??y()}),(0,O.jsx)(D,{})]})}function D(){let e=a();return(0,O.jsx)(`button`,{type:`button`,className:`rb-heat-story__replay rb-focus-ring`,onClick:e,children:`Tocar a entrada de novo`})}var O,k,A,j,M,N,P,F,I,L,R,z;function B(){return(B=e((()=>{g(),s(),u(),w(),p(),O=l(),{fn:k}=__STORYBOOK_MODULE_TEST__,A=(e,t)=>(0,O.jsx)(c,{client:d,mode:t.globals.rbMode??`light`,className:`rb-heat-story`,children:(0,O.jsx)(e,{})}),j={title:`Widgets/Pequenos múltiplos`,id:`widgets-pequenos-multiplos`,component:r,tags:[`autodocs`],parameters:{docs:{description:{component:`Uma minicurva por loja, com o nome, o último valor e a variação em texto. Todos os painéis usam a mesma escala de y (a escala própria por loja fica declarada na tela). Lojas em queda ganham selo e texto "em queda", nunca só cor; dia sem dado quebra a curva. Tab passa de um painel ao outro e as setas percorrem os dias. Cliente fictício: Pedravela Calçados.`}}},args:{title:`Receita diária por loja`,icon:(0,O.jsx)(h,{}),period:b.period,scope:b.scope,source:b.source,metricLabel:`Receita`,locale:`pt-BR`,scale:`shared`,sort:`input`,onViewChange:k()},argTypes:{status:{control:`inline-radio`,options:[`ready`,`loading`,`empty`,`error`,`restricted`,`partial`,`stale`]},scale:{control:`inline-radio`,options:[`shared`,`own`]},sort:{control:`inline-radio`,options:[`input`,`decline-first`]},defaultView:{control:`inline-radio`,options:[`chart`,`table`]},icon:{control:!1},data:{control:!1},decline:{control:!1},messages:{control:!1}},decorators:[f,A,(e,t)=>(0,O.jsx)(`div`,{style:{width:t.parameters.width===`narrow`?360:880,maxWidth:`100%`},children:(0,O.jsx)(e,{})})],render:e=>(0,O.jsx)(E,{...e})},M={name:`Padrão`},N={args:{defaultView:`table`}},P={render:e=>(0,O.jsxs)(`div`,{className:`rb-heat-story__states`,style:{gridTemplateColumns:`minmax(0, 1fr)`},children:[(0,O.jsx)(r,{...e,title:`Carregando`,status:`loading`,data:y()}),(0,O.jsx)(r,{...e,title:`Vazio`,status:`empty`,data:null}),(0,O.jsx)(r,{...e,title:`Erro`,status:`error`,data:null,onRetry:()=>{}}),(0,O.jsx)(r,{...e,title:`Parcial`,status:`partial`,partialNote:`2 lojas ainda não enviaram as vendas de 30/10.`,scope:`10 de 12 lojas`,data:y({stores:10})}),(0,O.jsx)(r,{...e,title:`Escala própria, quedas primeiro`,scale:`own`,sort:`decline-first`,data:y()})]})},F={globals:{rbMode:`dark`}},I={globals:{rbFamily:`glass`}},L={name:`Glass escuro`,globals:{rbFamily:`glass`,rbMode:`dark`}},R={name:`Estreito 360`,parameters:{width:`narrow`}},z=[`Padrao`,`Tabela`,`Estados`,`Escuro`,`Glass`,`GlassEscuro`,`Estreito360`],M.parameters={...M.parameters,docs:{...M.parameters?.docs,source:{originalSource:`{
+  name: "Padrão"
+}`,...M.parameters?.docs?.source},description:{story:`Padrão: 12 lojas, 30 dias, escala comum; três lojas em queda pela regra padrão (abaixo de −5%).`,...M.parameters?.docs?.description}}},N.parameters={...N.parameters,docs:{...N.parameters?.docs,source:{originalSource:`{
+  args: {
+    defaultView: "table"
+  }
+}`,...N.parameters?.docs?.source},description:{story:`A alternativa em tabela: loja, último valor, variação e tendência, com o selo de queda.`,...N.parameters?.docs?.description}}},P.parameters={...P.parameters,docs:{...P.parameters?.docs,source:{originalSource:`{
+  render: args => <div className="rb-heat-story__states" style={{
+    gridTemplateColumns: "minmax(0, 1fr)"
+  }}>
+      <SmallMultiples {...args} title="Carregando" status="loading" data={smallMultiplesData()} />
+      <SmallMultiples {...args} title="Vazio" status="empty" data={null} />
+      <SmallMultiples {...args} title="Erro" status="error" data={null} onRetry={() => {}} />
+      <SmallMultiples {...args} title="Parcial" status="partial" partialNote="2 lojas ainda não enviaram as vendas de 30/10." scope="10 de 12 lojas" data={smallMultiplesData({
+      stores: 10
+    })} />
+      <SmallMultiples {...args} title="Escala própria, quedas primeiro" scale="own" sort="decline-first" data={smallMultiplesData()} />
+    </div>
+}`,...P.parameters?.docs?.source},description:{story:`Carregando, vazio, erro, parcial e escala própria (declarada) com as quedas primeiro.`,...P.parameters?.docs?.description}}},F.parameters={...F.parameters,docs:{...F.parameters?.docs,source:{originalSource:`{
+  globals: {
+    rbMode: "dark"
+  }
+}`,...F.parameters?.docs?.source},description:{story:`Modo escuro.`,...F.parameters?.docs?.description}}},I.parameters={...I.parameters,docs:{...I.parameters?.docs,source:{originalSource:`{
+  globals: {
+    rbFamily: "glass"
+  }
+}`,...I.parameters?.docs?.source},description:{story:`Família Glass, claro.`,...I.parameters?.docs?.description}}},L.parameters={...L.parameters,docs:{...L.parameters?.docs,source:{originalSource:`{
+  name: "Glass escuro",
+  globals: {
+    rbFamily: "glass",
+    rbMode: "dark"
+  }
+}`,...L.parameters?.docs?.source},description:{story:`Família Glass, escuro.`,...L.parameters?.docs?.description}}},R.parameters={...R.parameters,docs:{...R.parameters?.docs,source:{originalSource:`{
+  name: "Estreito 360",
+  parameters: {
+    width: "narrow"
+  }
+}`,...R.parameters?.docs?.source},description:{story:`Celular a 360 px: duas colunas de painéis, nomes numa linha e o balão dentro da tela.`,...R.parameters?.docs?.description}}}})))()}export{T as n,B as r,M as t};

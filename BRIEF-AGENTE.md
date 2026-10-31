@@ -1,4 +1,4 @@
-# Prova de reconstrução · Michael · rc.6
+# Prova de reconstrução · Michael · rc.8
 
 ## Objetivo
 
@@ -6,7 +6,7 @@ Construir um workspace NBA usando apenas o kit entregue nesta branch/commit. A p
 
 ## Insumos permitidos
 
-Pacote `packages/rbbt-ui-0.5.0-rc.6.tgz`, RECEITA.md, catálogo local, `cliente-nba/`, `dados/dados-ficticios.json`, documentos e scaffold deste repositório. Pode ler todo o conteúdo do pacote instalado, inclusive tipos, contratos, README e CSS. Dependências públicas e documentação oficial das ferramentas são permitidas e devem ser registradas.
+Pacote `packages/rbbt-ui-0.5.0-rc.8.tgz`, RECEITA.md, catálogo local, `cliente-nba/`, `dados/dados-ficticios.json`, documentos e scaffold deste repositório. Pode ler todo o conteúdo do pacote instalado, inclusive tipos, contratos, README e CSS. Dependências públicas e documentação oficial das ferramentas são permitidas e devem ser registradas.
 
 Não acessar o repositório-fonte da biblioteca, demos privadas de referência, reconstruções anteriores ou memórias de outros agentes. O código dos exemplos fictícios da receita e catálogo é parte do material autorizado. Nenhuma implementação pronta da demonstração NBA é fornecida.
 
@@ -22,7 +22,7 @@ Não acessar o repositório-fonte da biblioteca, demos privadas de referência, 
 
 ## Novos widgets
 
-A rc.6 também inclui os Lotes 0–3 descritos em docs/ESCOPO-E-LIMITES.md. Estão disponíveis para uso. A reconstrução obrigatória continua sendo os seis módulos acima; não é necessário inserir todos os novos widgets artificialmente. O uso adicional deve ter motivo e dados de entrada explícitos.
+A rc.8 também inclui os Lotes 0–5 descritos em docs/ESCOPO-E-LIMITES.md. Estão disponíveis para uso. A reconstrução obrigatória continua sendo os seis módulos acima; não é necessário inserir todos os novos widgets artificialmente. O uso adicional deve ter motivo e dados de entrada explícitos.
 
 Michael somente monta workspaces com os componentes disponíveis. A criação e alteração de widgets reutilizáveis cabe exclusivamente ao Rbbt UI. Para uma capacidade ausente, abra uma Issue usando o modelo “Pedido de widget ao Rbbt UI”, descreva a necessidade em LACUNAS.md e avance nas partes independentes. Não improvise uma cópia do widget na página. O coordenador encaminha a Issue ao Rbbt UI; não há despacho automático de agentes neste repositório. A entrega do widget volta como nova versão do kit, com contrato e testes.
 
