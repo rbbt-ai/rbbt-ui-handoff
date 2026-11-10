@@ -1,0 +1,1 @@
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{Cr as t,wr as n}from"./src-04IKjZET.js";var r,i;function a(){return(a=e((()=>{n(),r={name:`trending-up`,size:24,node:[[`path`,{d:`M16 7h6v6`,key:`box55l`}],[`path`,{d:`m22 7-8.5 8.5-5-5L2 17`,key:`1t1m79`}]]},r.node,i=t(r)})))()}export{a as n,i as t};

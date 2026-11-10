@@ -1,6 +1,6 @@
 # Receita · montar um workspace
 
-Versão do pacote: `@rbbt/ui@0.5.0-rc.8` · release candidate com os Lotes 0–5 aprovados. Receita dos seis módulos criada na rc.2; exemplos e contratos compatíveis com a rc.8.
+Versão do pacote: `@rbbt/ui@0.5.0-rc.9` · release candidate com os Lotes 0–5 e as cartas de relatório (Reports) aprovados. Receita dos seis módulos criada na rc.2; exemplos e contratos compatíveis com a rc.9.
 
 Um workspace é uma página de trabalho com vários módulos (Visão geral, Lojas, Mix…) sob o mesmo topo, os mesmos filtros e o mesmo tema. Nesta biblioteca ele é a soma de quatro camadas:
 
@@ -37,7 +37,7 @@ Todos os adaptadores seguem o contrato de `adapters/series.ts`: linhas planas, c
 Projeto Vite + React + TypeScript com as **mesmas versões maiores do pacote**: React 19, Vite 8, `@vitejs/plugin-react` 6 e TypeScript 7 (as versões exatas estão em `node_modules/@rbbt/ui/package.json`). Instale o tarball pelo caminho do arquivo, com versão exata:
 
 ```bash
-npm install --save-exact ../packages/rbbt-ui-0.5.0-rc.8.tgz react@19.3.1 react-dom@19.3.1 lucide-react@1.59.0
+npm install --save-exact ../packages/rbbt-ui-0.5.0-rc.9.tgz react@19.3.1 react-dom@19.3.1 lucide-react@1.59.0
 npm install --save-dev --save-exact vite@8.3.4 @vitejs/plugin-react@6.1.2 typescript@7.0.2 @types/react@19.3.0 @types/react-dom@19.3.0
 ```
 

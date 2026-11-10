@@ -1,6 +1,6 @@
 # Rbbt UI · handoff para Michael
 
-Kit de consumo de **@rbbt/ui 0.5.0-rc.8**, baseado no commit de origem `47cb8e6df8321e1e6ad3fe02ab99e55a8ecfbe1d`. Contém a biblioteca compilada, catálogo da mesma versão, receita, tema NBA e dados fictícios. O Michael reconstrói o workspace em outra máquina e devolve as lacunas.
+Kit de consumo de **@rbbt/ui 0.5.0-rc.9**, baseado no commit de origem `d22f11b1a587e6149255793ee5fe409869341d33`. Contém a biblioteca compilada, catálogo da mesma versão, receita, tema NBA e dados fictícios. O Michael reconstrói o workspace em outra máquina e devolve as lacunas.
 
 Catálogo público da mesma versão: https://rbbt-rbbt-ui-studio.ravi.page/catalogo/
 
@@ -22,7 +22,7 @@ O repositório é público por decisão de Thiago em 30/10/2026, para permitir a
 Abra http://127.0.0.1:4400/catalogo/. Em outro terminal, na raiz do repositório:
 
 ```sh
-git switch -c michael/workspace-nba-rc8
+git switch -c michael/workspace-nba-rc9
 npm run init
 cd workspace
 npm ci
@@ -39,13 +39,14 @@ Abra http://127.0.0.1:5173/workspaces/nba-glass-receita/. A tela inicial confirm
 2. [RECEITA.md](RECEITA.md): os seis módulos, dados, tema, callbacks e URL.
 3. Catálogo local: Workspace → Receita e contratos dos widgets. Os contratos também estão em `workspace/node_modules/@rbbt/ui/docs/`.
 4. [docs/ESCOPO-E-LIMITES.md](docs/ESCOPO-E-LIMITES.md): widgets novos e ressalvas.
-5. [docs/ACEITE.md](docs/ACEITE.md): evidências da entrega do Michael.
-6. [docs/VALIDACAO.md](docs/VALIDACAO.md): o que foi validado antes deste handoff.
+5. [docs/MIGRACAO-RC8-RC9.md](docs/MIGRACAO-RC8-RC9.md): o que muda da rc.8 para a rc.9 (cartas de relatório) e o passo a passo no workspace.
+6. [docs/ACEITE.md](docs/ACEITE.md): evidências da entrega do Michael.
+7. [docs/VALIDACAO.md](docs/VALIDACAO.md): o que foi validado antes deste handoff.
 
 ## Conteúdo
 
 - `packages/`: tarball instalável, sem acesso ao repositório de desenvolvimento.
-- `catalogo/`: Storybook estático da rc.8, incluindo contratos e exemplos fictícios.
+- `catalogo/`: Storybook estático da rc.9, incluindo contratos e exemplos fictícios.
 - `cliente-nba/`: tema e logo para a reconstrução privada; não fazem parte do pacote genérico.
 - `dados/`: cenários fictícios por recorte e período.
 - `templates/workspace/`: ambiente mínimo com dependências fixas e lockfile.
@@ -64,14 +65,16 @@ Se tiver apenas leitura, peça acesso de escrita ao coordenador antes de enviar 
 
 ## Atualizações
 
-Para migrar um workspace existente da rc.6, a partir de `workspace/`:
+Para migrar um workspace existente da rc.8 (ou da rc.6), a partir de `workspace/`:
 
 ```sh
-npm install --save-exact ../packages/rbbt-ui-0.5.0-rc.8.tgz
+npm install --save-exact ../packages/rbbt-ui-0.5.0-rc.9.tgz
 npm run typecheck
 npm run build
 ```
 
-Repita os testes da aplicação e registre a atualização no PROVENANCE.md. Não execute `init` sobre um workspace existente. O tarball rc.6 permanece disponível para migração ou reversão.
+Confira no `package-lock.json` o `integrity` do tarball rc.9: `sha512-AsmOwiHTMOAsEZOLsG+NXzyc0fY+T7FEFr9sARrJv3b+6nERVDETrlafvphq2RT05luCq84ndDiisFWwiJnSKg==`. A rc.9 só acrescenta as cartas de relatório; o passo a passo está em [docs/MIGRACAO-RC8-RC9.md](docs/MIGRACAO-RC8-RC9.md).
+
+Repita os testes da aplicação e registre a atualização no PROVENANCE.md. Não execute `init` sobre um workspace existente. Os tarballs rc.6 e rc.8 permanecem disponíveis para migração ou reversão.
 
 Cada atualização entra em PR com tarball, receita, catálogo, changelog e manifesto coerentes. Nunca substituir silenciosamente o tarball de uma entrega existente. Este primeiro ciclo usa commits, sem tags. `git pull` atualiza o kit, mas o projeto consumidor mantém sua dependência fixa: a migração requer atualizar o caminho/versão de `@rbbt/ui`, o lockfile e repetir os testes. Veja [docs/MANUTENCAO.md](docs/MANUTENCAO.md).

@@ -1,0 +1,79 @@
+{
+  "source": "Clone Git limpo da branch entrega/rc9 no commit local 1318061, anterior ao saneamento das docs; catálogo, tarball, scripts e scaffold são os mesmos bytes do commit entregue. Catálogo servido por scripts/catalogo.mjs; scaffold compilado no clone",
+  "banner": "Catálogo rc.9: http://127.0.0.1:4497/catalogo/ (Ctrl+C para encerrar)",
+  "checks": [
+    {
+      "name": "catalogo-rc9",
+      "url": "http://127.0.0.1/catalogo/",
+      "viewport": "1440x900",
+      "status": 200,
+      "expect": "0.5.0-rc.9",
+      "expectFound": true,
+      "reportCards": 0,
+      "errors": [],
+      "failedResponses": [],
+      "overflow": false,
+      "axe": false,
+      "violations": []
+    },
+    {
+      "name": "report-deck-glass",
+      "url": "http://127.0.0.1/catalogo/iframe.html?id=reports-report-deck--glass&viewMode=story",
+      "viewport": "1280x900",
+      "status": 200,
+      "expect": null,
+      "expectFound": null,
+      "reportCards": 10,
+      "errors": [],
+      "failedResponses": [],
+      "overflow": false,
+      "axe": true,
+      "violations": [
+        "landmark-one-main (1) [cat.semantics, best-practice]",
+        "page-has-heading-one (1) [cat.semantics, best-practice]"
+      ]
+    },
+    {
+      "name": "report-dialog-360",
+      "url": "http://127.0.0.1/catalogo/iframe.html?id=reports-report-dialog--estreito-360&viewMode=story",
+      "viewport": "360x780",
+      "status": 200,
+      "expect": null,
+      "expectFound": null,
+      "reportCards": 0,
+      "errors": [],
+      "failedResponses": [],
+      "overflow": false,
+      "axe": true,
+      "violations": []
+    },
+    {
+      "name": "report-deck-contrato",
+      "url": "http://127.0.0.1/catalogo/iframe.html?id=reports-report-deck--contrato&viewMode=docs",
+      "viewport": "1280x900",
+      "status": 200,
+      "expect": "ReportDeck",
+      "expectFound": true,
+      "reportCards": 0,
+      "errors": [],
+      "failedResponses": [],
+      "overflow": false,
+      "axe": false,
+      "violations": []
+    },
+    {
+      "name": "scaffold-rc9",
+      "url": "http://127.0.0.1/workspaces/nba-glass-receita/",
+      "viewport": "1280x800",
+      "status": 200,
+      "expect": "@rbbt/ui 0.5.0-rc.9 carregado",
+      "expectFound": true,
+      "reportCards": 0,
+      "errors": [],
+      "failedResponses": [],
+      "overflow": false,
+      "axe": true,
+      "violations": []
+    }
+  ]
+}

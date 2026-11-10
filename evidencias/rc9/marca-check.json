@@ -1,0 +1,15 @@
+{
+  "patterns": [
+    "/\\bnba\\b/i",
+    "/nba[\\s_-]?store/i"
+  ],
+  "catalogo": {
+    "files": 167,
+    "hits": []
+  },
+  "tarball": {
+    "file": "packages/rbbt-ui-0.5.0-rc.9.tgz",
+    "entries": 225,
+    "hits": []
+  }
+}

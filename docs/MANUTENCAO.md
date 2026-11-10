@@ -7,4 +7,4 @@
 5. Abrir PR de entrega com nova versão do tarball; não substituir o conteúdo de uma versão já entregue. Aprovar o PR e comunicar o commit ao consumidor.
 6. No projeto consumidor, fazer a migração explícita da dependência, atualizar lockfile e repetir os testes. Preservar dados e implementação do consumidor.
 
-Neste ciclo não usamos tags, Releases ou publicação no npm. O repositório foi tornado público por Thiago para o acesso do Michael. A atualização rc.8 e a publicação do catálogo foram autorizadas em 30/10; futuras entregas seguem a autorização correspondente.
+Neste ciclo não usamos tags, Releases ou publicação no npm. O repositório foi tornado público por Thiago para o acesso do Michael. A atualização rc.8 e a publicação do catálogo foram autorizadas em 30/10. A entrega rc.9 foi pedida por Thiago em 10/11, com o catálogo rc.9 já publicado (release 22); segue em branch própria e PR. Futuras entregas seguem a autorização correspondente.

@@ -1,5 +1,14 @@
 # Histórico da entrega
 
+## 2026-11-10 · Atualização · 0.5.0-rc.9
+
+- Biblioteca e catálogo do commit aprovado d22f11b, o mesmo catálogo publicado na release 22.
+- Entram as cartas de relatório: ReportCard, ReportDeck e ReportDialog/ReportBack, com adaptadores e funções puras. Só acréscimos; nenhum contrato da rc.8 mudou.
+- Notas de migração rc.8 → rc.9 em [docs/MIGRACAO-RC8-RC9.md](docs/MIGRACAO-RC8-RC9.md), genéricas e válidas para qualquer workspace.
+- Scaffold e lockfile fixam o tarball rc.9; projetos existentes migram explicitamente. Tarballs rc.6 e rc.8 preservados.
+- Evidências novas em evidencias/rc9/; rc.6 e rc.8 preservadas. Reconstrução independente do Michael permanece pendente.
+- Ressalva: o subtítulo da galeria do catálogo mostra 0.4.0-rc.1 (detalhes em docs/VALIDACAO.md).
+
 ## 2026-10-30 · Atualização · 0.5.0-rc.8
 
 - Biblioteca, catálogo e receita atualizados juntos para os Lotes 0–5 aprovados.
