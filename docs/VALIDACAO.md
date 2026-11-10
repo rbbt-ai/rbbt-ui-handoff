@@ -38,6 +38,15 @@ Marca NBA (`nba` e `nba-store`) nos 167 arquivos do catálogo e nas 225 entradas
 
 Os testes da receita são sobre o exemplo fictício Pedravela. Não são a reconstrução NBA do Michael, que permanece pendente. Safari, Firefox e leitor de tela não têm validação completa. Ressalvas dos widgets em ESCOPO-E-LIMITES.md.
 
-O subtítulo da galeria do catálogo ainda mostra `@rbbt/ui 0.4.0-rc.1`; o menu e o pacote mostram 0.5.0-rc.9. O ajuste da rc.8 que deriva esse rótulo da versão do pacote (47cb8e6) não está no commit d22f11b. O catálogo do kit continua idêntico ao publicado na release 22; a correção depende de nova publicação.
+## Correção do catálogo (commit adicional, 10/11)
+
+- Commit restrito a `catalogo/`, `MANIFEST.sha256` e este arquivo. O tarball `packages/rbbt-ui-0.5.0-rc.9.tgz` não mudou: os bytes e o sha256 `93c387d923f107d4c08a0a9fa253049c421e9331fead1d7956880d685de22d63` são os mesmos do commit 2930fba.
+- Subtítulo da galeria: agora mostra `@rbbt/ui 0.5.0-rc.9`. O ajuste da rc.8 que deriva o rótulo da versão do pacote (47cb8e6) foi aplicado à fonte como 3600820. A galeria renderizada localmente não teve erro de JavaScript.
+- Página de contrato do ReportCard: o exemplo que citava uma peça interna de um workspace virou um exemplo genérico, "o cabeçalho de um painel de evolução" (fonte ac6393a).
+- Catálogo do kit refeito a partir dessa fonte: 167 arquivos.
+  - O catálogo público foi republicado em https://rbbt-rbbt-ui-studio.ravi.page/catalogo/ (release 24).
+  - Os 167 arquivos baixados coincidem byte a byte com o build e com este `catalogo/`.
+  - Nenhuma ocorrência de marca de cliente, do nome da peça interna ou de nomes de sistemas internos.
+- **Ocorrência remanescente:** dentro do tarball rc.9, `package/docs/report-card.md` ainda traz, num exemplo, o nome de uma peça interna de workspace. Ela não foi saneada nesta entrega, porque trocar o texto mudaria o tarball já entregue. A correção entra na próxima versão do pacote. Este kit não declara saneamento total da rc.9.
 
 As evidências das entregas rc.6 e rc.8 permanecem em evidencias/rc6/, evidencias/rc8/ e no histórico Git; não são apresentadas como testes novos da rc.9.
