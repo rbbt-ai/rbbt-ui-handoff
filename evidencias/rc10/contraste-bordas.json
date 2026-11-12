@@ -1,0 +1,138 @@
+[
+  {
+    "theme": "Glass claro",
+    "layout": "painel",
+    "borderColor": "color(srgb 0.345098 0.415686 0.501961 / 0.8)",
+    "borderWidth": "1px",
+    "fieldBackground": "oklab(0.999994 0.0000455678 0.0000200868 / 0.433726)",
+    "border": "#798899",
+    "inside": "#fdfefe",
+    "outside": "#fcfdfe",
+    "ratioInside": 3.59,
+    "ratioOutside": 3.56,
+    "trigger": {
+      "pillBorder": "0px",
+      "triggerBorder": "0px",
+      "pillShadow": "none"
+    }
+  },
+  {
+    "theme": "Glass claro",
+    "layout": "folha-360",
+    "borderColor": "color(srgb 0.345098 0.415686 0.501961 / 0.8)",
+    "borderWidth": "1px",
+    "fieldBackground": "oklab(0.999994 0.0000455678 0.0000200868 / 0.433726)",
+    "border": "#788899",
+    "inside": "#fafcfe",
+    "outside": "#f7f9fd",
+    "ratioInside": 3.53,
+    "ratioOutside": 3.45,
+    "trigger": {
+      "pillBorder": "0px",
+      "triggerBorder": "0px",
+      "pillShadow": "none"
+    }
+  },
+  {
+    "theme": "Glass escuro",
+    "layout": "painel",
+    "borderColor": "color(srgb 0.639216 0.705882 0.796078 / 0.8)",
+    "borderWidth": "1px",
+    "fieldBackground": "oklab(0.286211 -0.0136038 -0.0529518 / 0.518824)",
+    "border": "#8697af",
+    "inside": "#142740",
+    "outside": "#12243b",
+    "ratioInside": 5.06,
+    "ratioOutside": 5.26,
+    "trigger": {
+      "pillBorder": "0px",
+      "triggerBorder": "0px",
+      "pillShadow": "none"
+    }
+  },
+  {
+    "theme": "Glass escuro",
+    "layout": "folha-360",
+    "borderColor": "color(srgb 0.639216 0.705882 0.796078 / 0.8)",
+    "borderWidth": "1px",
+    "fieldBackground": "oklab(0.286211 -0.0136038 -0.0529518 / 0.518824)",
+    "border": "#8698b0",
+    "inside": "#182b46",
+    "outside": "#192c47",
+    "ratioInside": 4.84,
+    "ratioOutside": 4.78,
+    "trigger": {
+      "pillBorder": "0px",
+      "triggerBorder": "0px",
+      "pillShadow": "none"
+    }
+  },
+  {
+    "theme": "Smooth claro",
+    "layout": "painel",
+    "borderColor": "color(srgb 0.372549 0.419608 0.478431 / 0.8)",
+    "borderWidth": "1px",
+    "fieldBackground": "rgb(255, 255, 255)",
+    "border": "#7f8995",
+    "inside": "#ffffff",
+    "outside": "#ffffff",
+    "ratioInside": 3.55,
+    "ratioOutside": 3.55,
+    "trigger": {
+      "pillBorder": "0px",
+      "triggerBorder": "0px",
+      "pillShadow": "none"
+    }
+  },
+  {
+    "theme": "Smooth claro",
+    "layout": "folha-360",
+    "borderColor": "color(srgb 0.372549 0.419608 0.478431 / 0.8)",
+    "borderWidth": "1px",
+    "fieldBackground": "rgb(255, 255, 255)",
+    "border": "#7f8995",
+    "inside": "#ffffff",
+    "outside": "#ffffff",
+    "ratioInside": 3.55,
+    "ratioOutside": 3.55,
+    "trigger": {
+      "pillBorder": "0px",
+      "triggerBorder": "0px",
+      "pillShadow": "none"
+    }
+  },
+  {
+    "theme": "Smooth escuro",
+    "layout": "painel",
+    "borderColor": "color(srgb 0.552941 0.584314 0.564706 / 0.8)",
+    "borderWidth": "1px",
+    "fieldBackground": "rgb(18, 21, 20)",
+    "border": "#747b77",
+    "inside": "#121514",
+    "outside": "#171b19",
+    "ratioInside": 4.24,
+    "ratioOutside": 4.01,
+    "trigger": {
+      "pillBorder": "0px",
+      "triggerBorder": "0px",
+      "pillShadow": "none"
+    }
+  },
+  {
+    "theme": "Smooth escuro",
+    "layout": "folha-360",
+    "borderColor": "color(srgb 0.552941 0.584314 0.564706 / 0.8)",
+    "borderWidth": "1px",
+    "fieldBackground": "rgb(18, 21, 20)",
+    "border": "#747b77",
+    "inside": "#121514",
+    "outside": "#171b19",
+    "ratioInside": 4.24,
+    "ratioOutside": 4.01,
+    "trigger": {
+      "pillBorder": "0px",
+      "triggerBorder": "0px",
+      "pillShadow": "none"
+    }
+  }
+]
