@@ -1,0 +1,193 @@
+{
+  "package": "@rbbt/ui@0.5.0-rc.11",
+  "checks": [
+    {
+      "name": "build presente: dist/index.js",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "build presente: dist/styles.css",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "build presente: dist/fonts.css",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "build presente: dist/types/index.d.ts",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "tarball gerado",
+      "ok": true,
+      "detail": "rbbt-ui-0.5.0-rc.11.tgz (1452281 bytes, 229 arquivos)"
+    },
+    {
+      "name": "tarball só com dist, docs, README, CHANGELOG e package.json",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "tarball sem fontes TS, stories ou testes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "tarball com a receita e os contratos novos (0.5)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "chunk sob demanda do ECharts publicado",
+      "ok": true,
+      "detail": "engine-ixcjpmtK.js, index.js"
+    },
+    {
+      "name": "entrada não importa ECharts estaticamente",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "todo import publicado está declarado",
+      "ok": true,
+      "detail": "echarts/charts, echarts/components, echarts/core, echarts/renderers, react, react/jsx-runtime, react-aria-components, lucide-react, motion/react, @tanstack/react-table, @internationalized/date"
+    },
+    {
+      "name": "@internationalized/date importado e declarado",
+      "ok": true,
+      "detail": "3.12.4"
+    },
+    {
+      "name": "consumidor instalou o tarball",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "versão instalada fixa",
+      "ok": true,
+      "detail": "0.5.0-rc.11"
+    },
+    {
+      "name": "tipos ok no consumidor (moduleResolution Bundler, skipLibCheck false)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "tipos ok no consumidor (NodeNext)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "build do consumidor gerou JS e CSS com hash",
+      "ok": true,
+      "detail": "engine-ixcjpmtK-DE-6kgwQ.js, hubot-sans-latin-ext-wght-normal-HZLZm8wG.woff2, hubot-sans-latin-wght-normal-4x4LLvEw.woff2, hubot-sans-vietnamese-wght-normal-CfVCUiwU.woff2, index-Cf0HJjYk.js, index-G6cnh7m4.css, mona-sans-latin-ext-wght-normal-BqSk0Z3x.woff2, mona-sans-latin-wght-normal-Pz49MTQZ.woff2, mona-sans-vietnamese-wght-normal-DsUdksa4.woff2, plus-jakarta-sans-latin-ext-wght-normal-DmpS2jIq.woff2, plus-jakarta-sans-latin-wght-normal-eXO_dkmS.woff2, plus-jakarta-sans-vietnamese-wght-normal-qRpaaN48.woff2"
+    },
+    {
+      "name": "ECharts em chunk separado no consumidor (carregado sob demanda)",
+      "ok": true,
+      "detail": "engine-ixcjpmtK-DE-6kgwQ.js, index-Cf0HJjYk.js"
+    },
+    {
+      "name": "CSS do pacote presente no consumidor",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CSS do MixExplorer presente no consumidor",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CSS do Lote 1 presente no consumidor (capital, quadrante e mix)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CSS do Lote 2 presente no consumidor (cascata, bullet, Pareto e divergentes)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CSS do Lote 3 presente no consumidor (pequenos múltiplos, calendário e anotações)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CSS do Lote 4 presente no consumidor (fila, cartão, placar e raio-X)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CSS do Lote 5 presente no consumidor (tabela com minigráficos e card de insight)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CSS das cartas de relatório presente no consumidor (carta, baralho e verso, 0.5.0-rc.9)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CSS do Glass, do workspace e da operação presente no consumidor (0.5)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "CSS do pacote sem preflight global",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "fontes OFL empacotadas",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "receita: exemplo extraído dos blocos `arquivo:`",
+      "ok": true,
+      "detail": "src/vite-env.d.ts, src/main.tsx, index.html, src/tema.ts, src/marca/pedravela.svg, src/layout.css, src/dados.ts, src/cenario.json, src/cenario.ts, src/App.tsx"
+    },
+    {
+      "name": "receita: tipos ok (tsconfig estrito do modelo Vite + noUncheckedIndexedAccess)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "receita: build do consumidor",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "receita: 6 módulos no Chromium (desktop e celular, claro e escuro, axe, URL, console) — 146/146",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "tarball": {
+    "file": "rbbt-ui-0.5.0-rc.11.tgz",
+    "size": 1452281,
+    "unpackedSize": 5276042,
+    "entries": 229,
+    "integrity": "sha512-d9Rv91C59ubGxrDx5PwkeyxeXYpYfCMeqOz6zZkByLkuOO0hF6AYADk0v/wXh2pUAP3mtclJT/zTF0LMBUwvIA=="
+  },
+  "recipe": {
+    "files": [
+      "src/vite-env.d.ts",
+      "src/main.tsx",
+      "index.html",
+      "src/tema.ts",
+      "src/marca/pedravela.svg",
+      "src/layout.css",
+      "src/dados.ts",
+      "src/cenario.json",
+      "src/cenario.ts",
+      "src/App.tsx"
+    ],
+    "checks": 146,
+    "failures": []
+  }
+}

@@ -1,7 +1,7 @@
 ---
 name: Lacuna ou falha de integração
 about: Retorno da reconstrução com o kit
-title: '[rc.10] '
+title: '[rc.11] '
 ---
 
 ## Versão e ambiente

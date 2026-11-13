@@ -1,4 +1,4 @@
-# Prova de reconstrução · Michael · rc.10
+# Prova de reconstrução · Michael · rc.11
 
 ## Objetivo
 
@@ -6,7 +6,7 @@ Construir um workspace NBA usando apenas o kit entregue nesta branch/commit. A p
 
 ## Insumos permitidos
 
-Pacote `packages/rbbt-ui-0.5.0-rc.10.tgz`, RECEITA.md, catálogo local, `cliente-nba/`, `dados/dados-ficticios.json`, documentos e scaffold deste repositório. Pode ler todo o conteúdo do pacote instalado, inclusive tipos, contratos, README e CSS. Dependências públicas e documentação oficial das ferramentas são permitidas e devem ser registradas.
+Pacote `packages/rbbt-ui-0.5.0-rc.11.tgz`, RECEITA.md, catálogo local, `cliente-nba/`, `dados/dados-ficticios.json`, documentos e scaffold deste repositório. Pode ler todo o conteúdo do pacote instalado, inclusive tipos, contratos, README e CSS. Dependências públicas e documentação oficial das ferramentas são permitidas e devem ser registradas.
 
 Não acessar o repositório-fonte da biblioteca, demos privadas de referência, reconstruções anteriores ou memórias de outros agentes. O código dos exemplos fictícios da receita e catálogo é parte do material autorizado. Nenhuma implementação pronta da demonstração NBA é fornecida.
 
@@ -22,7 +22,7 @@ Não acessar o repositório-fonte da biblioteca, demos privadas de referência, 
 
 ## Novos widgets
 
-A rc.10 também inclui os Lotes 0–5, as cartas de relatório (ReportCard, ReportDeck e ReportDialog) e o seletor de período De/Até (DateRangePicker, também como filtro `kind: "date-range"` do ContextBar), descritos em docs/ESCOPO-E-LIMITES.md. Estão disponíveis para uso; as migrações estão em docs/MIGRACAO-RC8-RC9.md (rc.8 → rc.9) e docs/MIGRACAO-RC9-RC10.md (rc.9 → rc.10). A reconstrução obrigatória continua sendo os seis módulos acima; não é necessário inserir todos os novos widgets artificialmente. O uso adicional deve ter motivo e dados de entrada explícitos.
+A rc.11 também inclui os Lotes 0–5, as cartas de relatório (ReportCard, ReportDeck e ReportDialog) e o seletor de período De/Até (DateRangePicker, também como filtro `kind: "date-range"` do ContextBar, em campo na anatomia full desde a rc.11), descritos em docs/ESCOPO-E-LIMITES.md. Estão disponíveis para uso; as migrações estão em docs/MIGRACAO-RC8-RC9.md (rc.8 → rc.9), docs/MIGRACAO-RC9-RC10.md (rc.9 → rc.10) e docs/MIGRACAO-RC10-RC11.md (rc.10 → rc.11). A reconstrução obrigatória continua sendo os seis módulos acima; não é necessário inserir todos os novos widgets artificialmente. O uso adicional deve ter motivo e dados de entrada explícitos.
 
 Michael somente monta workspaces com os componentes disponíveis. A criação e alteração de widgets reutilizáveis cabe exclusivamente ao Rbbt UI. Para uma capacidade ausente, abra uma Issue usando o modelo “Pedido de widget ao Rbbt UI”, descreva a necessidade em LACUNAS.md e avance nas partes independentes. Não improvise uma cópia do widget na página. O coordenador encaminha a Issue ao Rbbt UI; não há despacho automático de agentes neste repositório. A entrega do widget volta como nova versão do kit, com contrato e testes.
 

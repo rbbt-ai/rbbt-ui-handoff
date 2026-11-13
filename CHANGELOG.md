@@ -1,5 +1,16 @@
 # Histórico da entrega
 
+## 2026-11-13 · Atualização · 0.5.0-rc.11
+
+- Biblioteca e catálogo do commit 3d03a10, o mesmo catálogo publicado na release 27.
+- Motivo: período na anatomia full alinhado aos campos vizinhos; nota de CSS do consumidor.
+- Na anatomia `full` do ContextBar (a padrão), o filtro `kind: "date-range"` vira um campo igual aos vizinhos: rótulo em cima, mesma caixa, altura, borda, raio e foco do SelectField, na mesma linha da grade. Na anatomia `lean` continua em pílula. O painel dos filtros do modo recolhido usa o campo e ocupa a largura disponível (até 32rem).
+- DateRangePicker ganha a prop opcional `appearance: "pill" | "field"` (padrão `pill`, como na rc.10). Nenhuma prop muda de sentido.
+- Nota "CSS do consumidor" no contrato e na migração: o pacote usa `@layer`; CSS global da página sem camada (`button`, `input`, `:focus-visible`) vence o pacote e pode desenhar caixas extras. Escope essas regras ou declare a camada da página antes da do pacote.
+- Notas de migração rc.10 → rc.11 em [docs/MIGRACAO-RC10-RC11.md](docs/MIGRACAO-RC10-RC11.md), genéricas e válidas para qualquer workspace.
+- Scaffold e lockfile fixam o tarball rc.11; projetos existentes migram explicitamente. Tarballs rc.6, rc.8, rc.9 e rc.10 preservados.
+- Evidências novas em evidencias/rc11/; as anteriores ficam preservadas. Reconstrução independente do Michael permanece pendente.
+
 ## 2026-11-12 · Atualização · 0.5.0-rc.10
 
 - Biblioteca e catálogo do commit a4f8f7c (visual do DateRangePicker aprovado em 12/11), o mesmo catálogo publicado na release 25.
