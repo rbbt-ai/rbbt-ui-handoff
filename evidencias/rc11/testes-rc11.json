@@ -1,0 +1,24 @@
+{
+  "fonte": "@rbbt/ui 0.5.0-rc.11, commit 3d03a10 (rodados entre 11:42 e 11:56 de 13/11/2026, depois do último CSS; um arquivo por vez)",
+  "ambiente": "Node 22.22.0, npm 10.9.4, macOS, Chromium (Playwright); projetos desktop (1440 x 900) e mobile (Pixel 7)",
+  "e2e": [
+    { "arquivo": "tests/e2e/date-range-geometry.spec.ts (novo)", "desktop": "12/12", "mobile": "12/12" },
+    { "arquivo": "tests/e2e/date-range-picker.spec.ts", "desktop": "13/13", "mobile": "13/13" },
+    { "arquivo": "tests/e2e/panels.spec.ts", "desktop": "41/41", "mobile": "37/37 (4 pulados por projeto)" },
+    { "arquivo": "tests/e2e/fase2.spec.ts", "desktop": "12/12", "mobile": "12/12" },
+    { "arquivo": "tests/e2e/cache.spec.ts", "todos os projetos": "3/3 (5 pulados por projeto), no catálogo final" },
+    { "arquivo": "tests/e2e/receita.spec.ts", "desktop": "ok, no catálogo final" }
+  ],
+  "geometria": {
+    "historias": ["Widgets/ContextBar › Período De/Até (anatomy full e lean)", "Widgets/DateRangePicker › Composição de página"],
+    "larguras": [1440, 1280, 768, 360],
+    "confere": [
+      "topo e altura da caixa do período iguais às do vizinho, com tolerância de 1 px (em 360 px, no painel dos filtros, mesma esquerda, largura e altura)",
+      "nenhuma interseção entre as caixas dos filtros, a linha de metadados, a cobertura e o bloco abaixo",
+      "anel de foco de teclado (data-focus-visible) com 2 px ou mais, dentro da caixa do controle + 4 px e sem cobrir vizinho",
+      "anatomia full e painel recolhido em campo (data-appearance=field, rótulo 'Período' em cima); lean em pílula"
+    ],
+    "medida_1440_full": { "periodo": { "y": 117.03, "altura": 36, "largura": 456 }, "vizinho": { "y": 117.03, "altura": 36, "largura": 456 } }
+  },
+  "pack_and_verify": "33/33 (evidencias/rc11/pack-report.json)"
+}

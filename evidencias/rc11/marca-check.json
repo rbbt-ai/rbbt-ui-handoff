@@ -1,0 +1,10 @@
+{
+  "quando": "2026-11-13",
+  "ferramenta": "ripgrep com -uuu (sem respeitar .gitignore), -i e -w",
+  "termos": ["nba", "nba-store"],
+  "alvos": [
+    { "alvo": "catalogo/ (168 arquivos, idênticos à release 27 do catálogo público)", "ocorrencias": 0 },
+    { "alvo": "packages/rbbt-ui-0.5.0-rc.11.tgz (229 entradas extraídas)", "ocorrencias": 0 }
+  ],
+  "nota": "A marca fica em cliente-nba/ e nos documentos do kit que descrevem a reconstrução. A varredura de nomes internos do workspace consumidor também deu zero no catálogo, no tarball rc.11 e nos textos do kit; os termos ficam fora deste repositório público."
+}

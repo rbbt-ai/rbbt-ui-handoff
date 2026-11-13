@@ -1,57 +1,52 @@
-# Validação da entrega rc.10
+# Validação da entrega rc.11
 
 Ambiente: Node 22.22.0, npm 10.9.4, macOS e Chromium.
 
-Fonte: código aprovado a4f8f7c, o mesmo do catálogo público rc.10 (release 25). Build da biblioteca refeito nesse commit antes do `npm pack`.
+Fonte: commit 3d03a10, o mesmo do catálogo público rc.11 (release 27). Build da biblioteca refeito nesse commit antes do `npm pack`.
+
+Motivo da rc.11: período na anatomia full alinhado aos campos vizinhos; nota de CSS do consumidor.
 
 ## Pacote como consumidor externo
 
-33/33 verificações do pack-and-verify passaram em 12/11/2026. Evidência em evidencias/rc10/pack-report.json.
+33/33 verificações do pack-and-verify passaram em 13/11/2026. Evidência em evidencias/rc11/pack-report.json.
 
-- Tarball `rbbt-ui-0.5.0-rc.10.tgz`: 1.449.418 bytes, 229 arquivos, só dist, docs, README, CHANGELOG e package.json; sem fontes TS, stories ou testes. sha256 `b848bbe3966924d87d7c739cb3b4e2993ddb580c32b2e85188af188aed979261`, `integrity` `sha512-gkiExBkb4byDq6nXj4v4WvuI4WCB7ETV8gcxaf9UHvj4V8RlHEQAmhqx0mLuKFCRsPCD+fKzKTX3fegZf6/6HA==`.
-- Todo import publicado declarado, inclusive `@internationalized/date` 3.12.4 (nova dependência declarada, na mesma versão que o React Aria já trazia); ECharts em chunk sob demanda.
-- Consumidor externo: instalação com versão fixa, tipos Bundler e NodeNext (`skipLibCheck: false`), build com JS/CSS com hash, CSS dos Lotes 1–5, das cartas de relatório, do Glass/workspace, sem preflight global, e fontes OFL.
-- Exemplo da receita: 146/146 verificações em seis módulos, desktop/celular, claro/escuro, axe, URL e console.
+- Tarball `rbbt-ui-0.5.0-rc.11.tgz`: 1.452.281 bytes, 229 arquivos, só dist, docs, README, CHANGELOG e package.json; sem fontes TS, stories ou testes. sha256 `a4b8145e456079b170b106c2a39354f11e8eadaf3071e47b54c854a257f87d7f`, `integrity` `sha512-d9Rv91C59ubGxrDx5PwkeyxeXYpYfCMeqOz6zZkByLkuOO0hF6AYADk0v/wXh2pUAP3mtclJT/zTF0LMBUwvIA==`.
+- Mesmas dependências da rc.10; nenhuma nova. Tipos Bundler e NodeNext (`skipLibCheck: false`), build com JS/CSS com hash, CSS sem preflight global e fontes OFL.
+- Os tipos publicados trazem a prop nova `appearance?: "pill" | "field"` do `DateRangePicker`.
 
-## DateRangePicker na fonte
+## Período em campo, na fonte
 
-Rodados na fonte depois da correção das bordas, antes do pack:
+Rodados na fonte depois da última mudança de CSS, um arquivo por vez. Contagens em evidencias/rc11/testes-rc11.json.
 
-- e2e do DateRangePicker: 13/13 no desktop e 13/13 no celular.
-- Capturas de revisão em Glass claro, Glass escuro e Smooth claro, com o painel e a folha abertos: axe sem violações.
-- Contraste da borda dos campos De/Até contra o fundo, medido por estilos computados (evidencias/rc10/contraste-bordas.json), dentro do campo e no painel em volta: Glass claro 3,45–3,59:1, Glass escuro 4,78–5,26:1, Smooth claro 3,55:1 e Smooth escuro 4,01–4,24:1. Todos acima de 3:1. Os tokens globais e os outros componentes não mudaram. O gatilho do período é uma pílula preenchida, sem borda, como as outras do ContextBar.
+- Teste novo de geometria (ContextBar › Período De/Até, anatomias full e lean, e a história Composição de página com select de loja, período, cobertura à direita e bloco abaixo; 1440, 1280, 768 e 360 px): 12/12 no desktop e 12/12 no celular. Confere topo e altura do período iguais aos do vizinho (1 px), nenhuma interseção entre filtros, metadados, cobertura e bloco, e o anel de foco de teclado dentro da caixa do controle mais 4 px, sem cobrir vizinho.
+- Medida a 1440 px, anatomia full: caixa do período e do vizinho com o mesmo topo (y 117) e a mesma altura (36 px).
+- e2e do DateRangePicker 13/13 + 13/13; ContextBar e painéis (panels) 41/41 + 37/37; fase 2 12/12 + 12/12; cache 3/3; receita ok.
+- Achado e corrigido no caminho: o painel dos filtros do modo recolhido encolhia ao conteúdo (cerca de 180 px a 360 px). Agora ocupa a largura disponível, até 32rem.
+- Capturas: periodo-antes-depois.png (antes rc.10 × depois rc.11 na anatomia full, com foco, e a lean sem mudança), composicao-1440.png, composicao-360.png, contextbar-recolhido-360.png e contextbar-full-glass-escuro-foco.png.
 
 ## Clone Git limpo do kit
 
-Clone da branch entrega/rc10 no commit 46356f2, sem acesso ao código da biblioteca: `npm run verify` (227 arquivos íntegros), `npm run init`, `npm ci` (53 pacotes, nenhuma vulnerabilidade), `npm run typecheck` e `npm run build` passaram. O pacote instalado é o 0.5.0-rc.10, e o CSS compilado do scaffold já traz a borda nova dos campos De/Até. Os caminhos do tarball são relativos.
+Clone da branch entrega/rc11 no commit d90ec61, sem acesso ao código da biblioteca: `npm run verify` (237 arquivos íntegros), `npm run init`, `npm ci` (53 pacotes, nenhuma vulnerabilidade), `npm run typecheck` e `npm run build` passaram. O pacote instalado é o 0.5.0-rc.11, com o `integrity` acima no lockfile, e o CSS compilado do scaffold já traz o campo do período e a largura nova do painel. Os caminhos do tarball são relativos.
 
-O commit seguinte só acrescenta evidencias/rc10/, este arquivo e o MANIFEST.sha256 regenerado. Tarball, lockfile, catálogo, scripts e scaffold continuam com os mesmos bytes.
+O commit seguinte só acrescenta evidências em evidencias/rc11/, este arquivo e o MANIFEST.sha256 regenerado. Tarball, lockfile, catálogo, scripts e scaffold continuam com os mesmos bytes.
 
-## Catálogo e scaffold renderizados
+## Catálogo
 
-Catálogo servido por `npm run catalogo` no clone limpo e scaffold compilado no mesmo clone. Resultados em evidencias/rc10/render-check.json.
-
-- Catálogo do kit: 168 arquivos, idênticos byte a byte ao build e ao conteúdo servido pelo catálogo público depois da publicação (https://rbbt-rbbt-ui-studio.ravi.page/catalogo/, release 25).
-- Galeria a 1440 px: menu e subtítulo com `@rbbt/ui 0.5.0-rc.10`, sem erro de JavaScript, recurso HTTP com erro ou rolagem lateral.
-- DateRangePicker Glass a 1280 px, com o painel aberto: sem erros, sem rolagem lateral e axe sem violações.
-- DateRangePicker a 360 px, com a folha aberta: sem erros, sem rolagem lateral e axe sem violações.
-- Página de contrato do DateRangePicker: carregou sem erros.
-- ContextBar com o período De/Até a 1280 px: sem erros. O axe, com todas as regras, aponta só duas regras de boas práticas de página (`landmark-one-main` e `region`): a história isolada não tem `main`. Nenhuma regra WCAG.
-- Scaffold: “@rbbt/ui 0.5.0-rc.10 carregado”, sem erros e axe sem violações.
-- A nota docs/MIGRACAO-RC9-RC10.md termina com o texto exato de `docs/date-range-picker-migracao.md` do tarball.
-- Capturas: catalogo-rc10.png, date-range-picker-glass.png, date-range-picker-360.png e scaffold-rc10.png.
+- Catálogo do kit: 168 arquivos, idênticos byte a byte ao build e ao conteúdo servido pelo catálogo público depois da publicação (https://rbbt-rbbt-ui-studio.ravi.page/catalogo/, release 27).
+- A nota docs/MIGRACAO-RC10-RC11.md termina com o texto exato de `docs/date-range-picker-migracao.md` do tarball.
+- Nesta entrega não houve nova rodada de renderização do catálogo servido pelo clone (`npm run catalogo`); a renderização do catálogo foi feita na fonte, com os mesmos bytes.
 
 ## Varredura de marca e de nomes internos
 
-- Marca NBA (`nba` e `nba-store`) nos 168 arquivos do catálogo e nas 229 entradas do tarball rc.10: nenhuma ocorrência. Evidência em evidencias/rc10/marca-check.json. A marca fica em cliente-nba/ e nos documentos do kit que descrevem a reconstrução.
-- **Ocorrência da rc.9 resolvida:** o tarball rc.10 não traz mais o nome da peça interna de workspace que ficou em `package/docs/report-card.md` do tarball rc.9. O exemplo da documentação agora é genérico, como já era no catálogo desde a release 24. O tarball rc.9 continua com os bytes entregues em 10/11 e, portanto, ainda com essa ocorrência. A mesma varredura de nomes internos do workspace consumidor deu zero no catálogo e no tarball rc.10.
+- Marca NBA (`nba` e `nba-store`) nos 168 arquivos do catálogo e nas 229 entradas do tarball rc.11: nenhuma ocorrência. Evidência em evidencias/rc11/marca-check.json. A marca fica em cliente-nba/ e nos documentos do kit que descrevem a reconstrução.
+- A varredura de nomes internos do workspace consumidor deu zero no catálogo, no tarball rc.11 e nos textos do kit.
 
 ## Tarballs anteriores
 
-Não mudaram. sha256: rc.6 `b90c598250711a0d0cc582e27bae0dbe6f43fe01c0e103633748428db90e965e`, rc.8 `159dce7b904549f5c5f7b560906921b57fe9817be0ad5186375ac814629b29f7` e rc.9 `93c387d923f107d4c08a0a9fa253049c421e9331fead1d7956880d685de22d63`.
+Não mudaram. sha256: rc.6 `b90c598250711a0d0cc582e27bae0dbe6f43fe01c0e103633748428db90e965e`, rc.8 `159dce7b904549f5c5f7b560906921b57fe9817be0ad5186375ac814629b29f7`, rc.9 `93c387d923f107d4c08a0a9fa253049c421e9331fead1d7956880d685de22d63` e rc.10 `b848bbe3966924d87d7c739cb3b4e2993ddb580c32b2e85188af188aed979261`.
 
 ## Limites
 
-Os testes da receita são sobre o exemplo fictício Pedravela. Não são a reconstrução NBA do Michael, que permanece pendente. Safari, Firefox e leitor de tela não têm validação completa. Ressalvas dos widgets, inclusive as do DateRangePicker, em ESCOPO-E-LIMITES.md.
+O teste de geometria cobre as histórias do catálogo; não substitui a conferência na página de cada workspace. Uma caixa extra em volta do valor do período, vinda de CSS global da página sem camada, não é do pacote; a nota "CSS do consumidor" (contrato e migração) explica como evitar. Os testes da receita são sobre o exemplo fictício Pedravela. A reconstrução NBA do Michael permanece pendente. Safari, Firefox e leitor de tela não têm validação completa. Ressalvas dos widgets em ESCOPO-E-LIMITES.md.
 
-As evidências das entregas rc.6, rc.8 e rc.9 permanecem em evidencias/rc6/, evidencias/rc8/, evidencias/rc9/ e no histórico Git; não são apresentadas como testes novos da rc.10.
+As evidências das entregas rc.6, rc.8, rc.9 e rc.10 permanecem em evidencias/ e no histórico Git; não são apresentadas como testes novos da rc.11.
