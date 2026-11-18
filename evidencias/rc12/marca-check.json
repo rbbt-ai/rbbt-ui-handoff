@@ -1,0 +1,11 @@
+{
+  "quando": "2026-11-17",
+  "ferramenta": "ripgrep com -uuu (sem respeitar .gitignore), -i e -w; no tarball, rg -z -a sobre o .tgz (controle: 'BentoGrid' aparece 17 vezes)",
+  "termos": ["nba", "nba-store"],
+  "alvos": [
+    { "alvo": "catalogo/ (176 arquivos, idênticos à release 28 do catálogo público)", "ocorrencias": 0 },
+    { "alvo": "packages/rbbt-ui-0.5.0-rc.12.tgz (238 arquivos)", "ocorrencias": 0 },
+    { "alvo": "fonte do pacote: src, dist, docs, stories, README e CHANGELOG", "ocorrencias": 0 }
+  ],
+  "nota": "A marca fica em cliente-nba/ e nos documentos do kit que descrevem a reconstrução. A varredura de nomes internos do workspace consumidor também deu zero no catálogo, no tarball rc.12 e na fonte; os termos ficam fora deste repositório público."
+}

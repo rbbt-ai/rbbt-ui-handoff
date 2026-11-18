@@ -1,6 +1,6 @@
 # Receita · montar um workspace
 
-Versão do pacote: `@rbbt/ui@0.5.0-rc.11` · release candidate com os Lotes 0–5 aprovados, as cartas de relatório (rc.9), o seletor de período De/Até (rc.10) e o período em campo na anatomia full do ContextBar (rc.11). Receita dos seis módulos criada na rc.2; exemplos e contratos compatíveis com a rc.11.
+Versão do pacote: `@rbbt/ui@0.5.0-rc.12` · release candidate com os Lotes 0–5 aprovados, as cartas de relatório (rc.9), o seletor de período De/Até (rc.10), o período em campo na anatomia full do ContextBar (rc.11) e o workspace em mosaico (rc.12: barra lateral, grade em mosaico, hero, proporção, agentes, ponte em cascata e polaridade por linha; passo 9). Receita dos seis módulos criada na rc.2; exemplos e contratos compatíveis com a rc.12.
 
 Um workspace é uma página de trabalho com vários módulos (Visão geral, Lojas, Mix…) sob o mesmo topo, os mesmos filtros e o mesmo tema. Nesta biblioteca ele é a soma de quatro camadas:
 
@@ -37,7 +37,7 @@ Todos os adaptadores seguem o contrato de `adapters/series.ts`: linhas planas, c
 Projeto Vite + React + TypeScript com as **mesmas versões maiores do pacote**: React 19, Vite 8, `@vitejs/plugin-react` 6 e TypeScript 7 (as versões exatas estão em `node_modules/@rbbt/ui/package.json`). Instale o tarball pelo caminho do arquivo, com versão exata:
 
 ```bash
-npm install --save-exact ../packages/rbbt-ui-0.5.0-rc.11.tgz react@19.3.1 react-dom@19.3.1 lucide-react@1.59.0
+npm install --save-exact ../packages/rbbt-ui-0.5.0-rc.12.tgz react@19.3.1 react-dom@19.3.1 lucide-react@1.59.0
 npm install --save-dev --save-exact vite@8.3.4 @vitejs/plugin-react@6.1.2 typescript@7.0.2 @types/react@19.3.0 @types/react-dom@19.3.0
 ```
 
@@ -1231,6 +1231,61 @@ Antes de chamar o workspace de pronto:
 - Movimento reduzido: valores finais direto, sem cascata.
 - URL: refresh e link direto com `?modulo=…&recorte=…&periodo=…&tema=escuro` abrem o mesmo estado; Voltar volta de módulo.
 - Dados: ausência aparece como "Sem leitura", "Sem dados" ou "—", nunca 0; selo "Dados fictícios" visível quando os dados forem fictícios.
+
+## 9. Montar o workspace em mosaico (0.5.0-rc.12)
+
+O mosaico troca a página longa de relatório por telas curtas: cada módulo cabe em 1 a 1,5 tela a 1440×900, com um gráfico protagonista acima da dobra, uma mensagem principal e uma ação. No catálogo: Workspace › Mosaico (Visão geral e Módulo-molde). Tudo é aditivo: o topo da rc.11 continua sendo o padrão.
+
+**1. Shell com barra lateral.** Ligue `navigation="sidebar"` no `WorkspaceShell`. Agrupe os módulos com `group` e declare os grupos em `groups` (ordem e rótulo). `badge` mostra pendências (0, `null` e ausente não aparecem; acima de 99 vira "99+"), com `badgeLabel` para o leitor de tela. A barra recolhe pelo botão do pé (ou controlada por `sidebarCollapsed`/`onSidebarCollapsedChange`) e recolhe sozinha abaixo de 1180 px de contêiner. No celular (abaixo de 768 px), vira uma barra compacta com "Menu", que abre a mesma navegação numa gaveta. A barra de contexto fixa vem em `contextBar`, em geral um `ContextBar` com região, período (`kind: "date-range"`) e "atualizado em".
+
+```tsx
+<WorkspaceShell
+  navigation="sidebar"
+  modules={modules} // { id, label, icon, group?, badge?, badgeLabel? }
+  groups={[{ id: "resultado", label: "Resultado" }, { id: "operacao", label: "Operação" }]}
+  module={module}
+  onModuleChange={setModule}
+  theme={{ mode, onChange: setMode }}
+  contextBar={<ContextBar title="Visão geral" anatomy="lean" filters={[regiao, periodo]} updatedAt={atualizadoEm} source={fonte} />}
+>
+  {conteudoDoModulo}
+</WorkspaceShell>
+```
+
+**2. Grade em mosaico.** `BentoGrid` + `BentoItem`. A grade tem 12 trilhas: `span` conta quartos (`of={4}`, padrão) ou terços (`of={3}`); `rows` estica a célula por 1 a 4 linhas. Responde ao próprio contêiner: 4 colunas a partir de 880 px, 2 de 540 a 879 px (só o quarto fica em meia largura) e 1 abaixo. O gutter é um só na horizontal e na vertical (20 px, 16 px no estreito, 12 px em `density="compact"`). A ordem visual é a do código, que é a ordem de leitura e de Tab.
+
+```tsx
+<BentoGrid label="Visão geral">
+  <BentoItem><StatCard variant="hero" … /></BentoItem>
+  <BentoItem><StatCard … /></BentoItem>
+  <BentoItem><StatCard … /></BentoItem>
+  <BentoItem><StatCard … /></BentoItem>
+  <BentoItem span={2} of={3} rows={2}><EvolutionChart height={196} … /></BentoItem>
+  <BentoItem span={1} of={3}>{/* "Precisa de você": resumo que abre o DecisionCard no DetailPanel */}</BentoItem>
+  <BentoItem span={1} of={3}><ProportionCard shape="bar" … /></BentoItem>
+</BentoGrid>
+```
+
+**3. Regras de densidade.**
+
+1. Um card de destaque (o `StatCard variant="hero"`, no gradiente do tema) por tela. Cor de alerta só para alerta e ação primária.
+2. No máximo 4 indicadores por fileira, com a mesma anatomia e a mesma altura.
+3. Um gráfico protagonista por tela (`span` 2 ou 3, `rows` 2), acima da dobra.
+4. Cards longos (cartão de decisão completo, ficha) entram como resumo que abre o `DetailPanel`.
+5. Tabela detalhada sempre recolhida: `<details className="rb-ws-disclosure">` com `<summary className="rb-ws-disclosure__summary">Ver tabela…</summary>`.
+6. Cada módulo cabe em 1 a 1,5 tela a 1440×900. Meça a página pronta e corte antes de acrescentar.
+
+**4. Peças novas da rc.12.**
+
+- `StatCard variant="hero"`: número 600, `trend` (minigráfico; `null` interrompe a linha) e `comparisons` ("vs budget", "vs anterior"; sem referência aparece "sem dado").
+- `ProportionCard`: anel (`shape="ring"`) ou barra empilhada (`shape="bar"`) para composição (ex.: contratado · pendente · a identificar), tabela alternativa e total parcial quando falta um segmento.
+- `AgentActivityCard`: lista curta com nome, métrica, estado (ícone + texto + tom), horário e `onOpenItem`. Serve a outras listas laterais curtas (`stateLabel` troca o texto do estado).
+- `BridgeChart` (B-002): ponte com totais intermediários (Ano anterior → Budget → Projection → Pacing), conferência das âncoras e ausência ≠ zero.
+- `ComparisonRow.polarity` (B-003): receita e despesa na mesma tabela; subtotal e total que misturam ficam neutros com o motivo.
+
+**5. Módulo-molde.** Título com a conclusão e uma ação (`WorkspaceSection` com `action`) → faixa de indicadores (4 quartos) → gráfico protagonista (2/3) → lista lateral (1/3) → tabela recolhida (largura toda). Veja Workspace › Mosaico › Módulo-molde.
+
+**6. Validar.** Além do passo 8: a 1440×900, nenhuma célula sobrepõe outra, os gutters são iguais e o módulo mede até 1,5 tela; a 360 px a gaveta abre e fecha pelo teclado (Esc devolve o foco ao "Menu"); a barra recolhida mantém o nome de cada módulo para o leitor de tela.
 
 ## O que fica no consumidor
 

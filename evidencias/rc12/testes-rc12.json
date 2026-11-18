@@ -1,0 +1,24 @@
+{
+  "quando": "2026-11-17",
+  "fonte": "rbbt-ui-reports, branch feat/workspace-mosaico (catálogo e pacote em 60479cd)",
+  "ambiente": "Node 22.22.0, Playwright Chromium; projetos desktop (1440×900) e mobile",
+  "rodadas": [
+    { "arquivo": "tests/e2e/mosaico.spec.ts", "projetos": "desktop + mobile", "passaram": 23, "pulados": 9, "falharam": 0, "nota": "pulados = testes só de desktop ou só de celular" },
+    { "arquivo": "tests/e2e/date-range-picker.spec.ts", "projetos": "desktop + mobile", "passaram": 26, "falharam": 0 },
+    { "arquivo": "tests/e2e/date-range-geometry.spec.ts", "projetos": "desktop + mobile", "passaram": 24, "falharam": 0 },
+    { "arquivo": "tests/e2e/rc2.spec.ts (WorkspaceShell)", "projetos": "desktop + mobile", "passaram": 24, "pulados": 2, "falharam": 0 },
+    { "arquivo": "tests/e2e/v3.spec.ts (workspace)", "projetos": "desktop + mobile", "passaram": 18, "pulados": 2, "falharam": 0 },
+    { "arquivo": "tests/e2e/insight-card.spec.ts", "projetos": "desktop + mobile", "passaram": 24, "falharam": 0 },
+    { "arquivo": "tests/e2e/diverging-bars.spec.ts", "projetos": "desktop + mobile", "passaram": 26, "pulados": 7, "falharam": 1, "nota": "tempo esgotado de 30 s sob carga no teste de geometria do balão; isolado passou (1/1)" },
+    { "arquivo": "tests/e2e/cache.spec.ts", "projetos": "desktop", "passaram": 3, "pulados": 1, "falharam": 0 },
+    { "arquivo": "scripts/pack-and-verify.mjs", "resultado": "OK", "nota": "consumidor externo com as peças do mosaico; tipos Bundler e NodeNext; build; receita 146/146" }
+  ],
+  "rodada_anterior_desta_rc": [
+    { "arquivo": "tests/unit/mosaico.spec.ts", "passaram": 18 },
+    { "arquivo": "unidade, regressão", "passaram": 43 },
+    { "arquivo": "tests/e2e/stat-card.spec.ts + result-waterfall.spec.ts", "projetos": "desktop", "passaram": 30, "pulados": 1 },
+    { "arquivo": "tests/e2e/panels.spec.ts (ComparisonTable e painéis)", "projetos": "desktop", "passaram": 41, "nota": "1 tempo esgotado sob carga passou isolado" },
+    { "arquivo": "tests/e2e/receita.spec.ts", "projetos": "desktop", "passaram": 4 }
+  ],
+  "medida": { "visao_geral_grade_px": 1303, "telas": 1.45, "pagina_inteira_px": 1774, "viewport": "1440×900" }
+}

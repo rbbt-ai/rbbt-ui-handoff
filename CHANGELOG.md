@@ -1,5 +1,18 @@
 # Histórico da entrega
 
+## 2026-11-17 · Atualização · 0.5.0-rc.12
+
+- Biblioteca e catálogo do commit 60479cd. É o catálogo publicado em /catalogo na release seguinte à 27. A fonte segue em f8514cf, que só acrescenta as peças novas à checagem do consumidor externo.
+- Motivo: workspace em mosaico (bento), pedido aprovado pelo Thiago em 17/11. Tudo é aditivo: sem as props novas, nada muda em relação à rc.11.
+- WorkspaceShell `navigation="sidebar"`: barra lateral de ícones com grupos, badge, item atual (`aria-current`), recolher e expandir, e barra de contexto fixa. No celular, barra compacta e gaveta.
+- BentoGrid/BentoItem: grade em mosaico com spans de 1 a 4 (quartos ou terços), linhas variáveis e gutter único.
+- StatCard `variant="hero"` (minigráfico e comparações), ProportionCard (anel ou barra, "a identificar", tabela, ausência ≠ zero) e AgentActivityCard (o que os agentes fizeram hoje, link por callback).
+- BridgeChart (ponte em cascata com totais intermediários, conferência e tabela) e `ComparisonRow.polarity` (polaridade por linha; total misto neutro com o motivo).
+- `density="compact"` no InsightCard e nas DivergingBars, para células de mosaico.
+- Notas de migração rc.11 → rc.12 em [docs/MIGRACAO-RC11-RC12.md](docs/MIGRACAO-RC11-RC12.md), genéricas e válidas para qualquer workspace.
+- O scaffold e o lockfile fixam o tarball rc.12; projetos existentes migram explicitamente. Os tarballs rc.6, rc.8, rc.9, rc.10 e rc.11 ficam preservados.
+- Evidências novas em evidencias/rc12/; as anteriores ficam preservadas.
+
 ## 2026-11-13 · Atualização · 0.5.0-rc.11
 
 - Biblioteca e catálogo do commit 3d03a10, o mesmo catálogo publicado na release 27.

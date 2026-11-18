@@ -1,6 +1,6 @@
 # Escopo e limites conhecidos
 
-Kit rc.11 em repositório público autorizado por Thiago; código publicado no catálogo 3d03a10 (correção do período na anatomia full do ContextBar, pedida por Thiago em 13/11, sobre a rc.10 a4f8f7c, cujo visual do DateRangePicker foi aprovado em 12/11). A rc.10 (a4f8f7c), a rc.9 (d22f11b) e a rc.8 (eb89f81, preparação e682f09) continuam disponíveis em packages/.
+Kit rc.12 em repositório público autorizado por Thiago. O código publicado no catálogo é 60479cd: workspace em mosaico, pedido aprovado por Thiago em 17/11, sobre a rc.11 3d03a10. A rc.11 (3d03a10), a rc.10 (a4f8f7c), a rc.9 (d22f11b) e a rc.8 (eb89f81, preparação e682f09) continuam disponíveis em packages/.
 
 ## Disponível
 
@@ -15,6 +15,19 @@ Além dos seis módulos e da estrutura Workspace:
 - rc.9 · Reports: ReportCard (carta 5:7), ReportDeck (filtros, busca, ordem e favoritos), ReportDialog/ReportBack (verso com gráfico e tabela), adaptadores `reportCardFromRecord`/`reportDetailFromRecords` e funções puras. Só acréscimos; nenhum contrato da rc.8 mudou. Migração em [MIGRACAO-RC8-RC9.md](MIGRACAO-RC8-RC9.md).
 - rc.10 · Período: DateRangePicker (De/Até digitável em dias ISO, calendário com 2 meses no desktop e folha com 1 mês abaixo de 640 px, atalhos opcionais, `min`/`max`, `timeZone`, estados `ready`/`loading`/`empty`/`disabled`/`error`), filtro `kind: "date-range"` no ContextBar e funções puras de período (`formatDateRangeLabel` gera o texto do período do PageContextProvider, que não muda). Só acréscimos; nenhum contrato da rc.9 mudou. Migração em [MIGRACAO-RC9-RC10.md](MIGRACAO-RC9-RC10.md).
 - rc.11 · Período em campo: na anatomia `full` do ContextBar, o filtro `kind: "date-range"` é um campo igual aos vizinhos (rótulo em cima, mesma caixa, altura e foco do SelectField, na mesma linha da grade); na `lean`, pílula. `DateRangePicker` ganha `appearance: "pill" | "field"` (padrão `pill`). O painel dos filtros recolhido ocupa a largura disponível. Nota "CSS do consumidor": o pacote usa `@layer` e CSS global da página sem camada vence o pacote. Migração em [MIGRACAO-RC10-RC11.md](MIGRACAO-RC10-RC11.md).
+- rc.12 · Workspace em mosaico, todo aditivo:
+  - `WorkspaceShell` `navigation="sidebar"`: grupos, badge, `aria-current`, recolher e barra de contexto fixa; barra compacta e gaveta no celular.
+  - `BentoGrid`/`BentoItem`: spans de 1 a 4, terços e linhas variáveis.
+  - `StatCard` `variant="hero"`: minigráfico e comparações.
+  - `ProportionCard`: anel ou barra, "a identificar", tabela, ausência ≠ zero.
+  - `AgentActivityCard`: link por callback.
+  - `BridgeChart`: ponte com totais intermediários e conferência.
+  - `ComparisonRow.polarity`: total misto neutro com o motivo.
+  - `density="compact"` no `InsightCard` e nas `DivergingBars`.
+  - Ressalvas:
+    - a grade da Visão geral de exemplo cabe em 1,45 tela a 1440×900, mas a página inteira (com cabeçalho e rodapé) passa de 1,5 tela;
+    - o visual espera o aceite do Thiago.
+  - Migração em [MIGRACAO-RC11-RC12.md](MIGRACAO-RC11-RC12.md).
 
 Os dados são fictícios. O catálogo usa Pedravela; marca NBA fica nos insumos do consumidor destinados ao workspace privado. Não são fornecidos eventos reais extraídos da planilha NBA.
 
@@ -36,6 +49,6 @@ Lote 6: previsão/acuracidade, abastecimento/fornecedores, Sankey e promoções.
 - DateRangePicker: com o teclado no calendário, o Enter que marca o início leva o foco ao dia seguinte. É o comportamento do React Aria 1.22, coberto por teste.
 - DateRangePicker: não foram testados o clique fora depois de digitar (a saída do campo confirma um período válido) nem uma data inexistente digitada nos segmentos (o React Aria limita o dia).
 - DateRangePicker: o alvo de 44 px foi medido só na folha do celular. No desktop com ponteiro grosso, a área vem do `::before` e não foi medida.
-- A receita dos seis módulos nasceu na rc.2 e foi validada com rc.11; os novos widgets têm contratos próprios e não precisam ser usados artificialmente em todos os módulos.
+- A receita dos seis módulos nasceu na rc.2 e foi validada com rc.12; os novos widgets têm contratos próprios e não precisam ser usados artificialmente em todos os módulos.
 
 A aprovação dos componentes não substitui o aceite da reconstrução pelo Michael.
