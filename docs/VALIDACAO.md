@@ -38,7 +38,20 @@ Rodados na fonte, um arquivo por vez. Contagens em evidencias/rc12/testes-rc12.j
 
 ## Clone Git limpo do kit
 
-Pendente nesta montagem: preencher depois de `npm run verify`, `npm run init`, `npm ci`, `npm run typecheck` e `npm run build` num clone limpo da branch entrega/rc12.
+Clone da branch entrega/rc12 no commit 425d539, sem acesso ao código da biblioteca. Passaram:
+- `npm run verify`, com 262 arquivos íntegros;
+- `npm run init`;
+- `npm ci`, com 53 pacotes;
+- `npm run typecheck` e `npm run build`.
+
+O pacote instalado é o 0.5.0-rc.12, com o `integrity` acima no lockfile, e traz `docs/workspace-mosaico.md`. Os caminhos do tarball são relativos.
+
+**npm audit em 17/11/2026:** 5 avisos altos, todos do mesmo aviso novo, GHSA-fc5q-39xc-vjpf (ReDoS no `picomatch`, que vale para todas as versões).
+- O aviso chega por `fdir`, `tinyglobby`, `vite` e `@vitejs/plugin-react`, as ferramentas de build do scaffold. Não vem do `@rbbt/ui`.
+- O lockfile do scaffold é o mesmo da rc.11, exceto pelo `@rbbt/ui`. Na rc.11 o audit deu zero porque o aviso ainda não existia.
+- `npm audit fix --force` rebaixaria o vite para 6.2.7, uma mudança incompatível. Por isso fica como lacuna, até sair uma versão corrigida.
+
+O commit seguinte só registra este resultado e o MANIFEST.sha256 regenerado. Tarball, lockfile, catálogo, scripts e scaffold continuam com os mesmos bytes.
 
 ## Catálogo
 
